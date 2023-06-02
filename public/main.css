@@ -542,7 +542,11 @@ a {
     cursor: pointer;
   }
   
-  .artist {
+  .artist__individual {
+    position: fixed;
+    z-index: 10000;
+    left: calc(3.1*1920px);
+    top: calc(3.5*1080px);
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -550,21 +554,13 @@ a {
     text-align: center;
     height: calc(100vh - (1rem + 3*0.2rem + 3*0.7rem));
     padding-top: calc(1rem + 3*0.2rem + 3*0.7rem);
+    background: url(images/terms_background.jpg);
+    border:solid 2px black;
   }
   .test-popup {
     padding: 2rem;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-    z-index: 91;
-    left: calc(3.1*1920px);
-    top: calc(3.5*1080px);
-
     background: url(images/terms_background.jpg);
   }
-
 
   .artist__actions {
     font-size: 1.5rem;

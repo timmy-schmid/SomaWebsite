@@ -24,17 +24,6 @@ function loaded () {
       zoom: false});
 }
 
-document.addEventListener('touchstart', function (e) {
-  if(e.touches.length > 1) {
-      myScroll.disable();
-  }
-});
-
-document.addEventListener('touchend', function (e) {
-  myScroll.enable();
-});
-
-
 /*artist stuff */
 let artistSection = document.getElementById('artists');
 function loadArtistDOM(value,key,map) {
@@ -130,8 +119,7 @@ var toggleButton = document.querySelector(".toggle-button");
 var toggled = false;
 
 //Artist Popup Functionality
-var artist = document.querySelector(".artist");
-var modalArtists = document.querySelector(".modal-artists");
+var artist = document.querySelector(".artist__individual");
 var artistButtons = document.querySelectorAll("#artists h3");
 
 for (var i = 0; i < artistButtons.length; i++) {
@@ -151,8 +139,10 @@ function loadArtist(event) {
   if (currentArtist === undefined) {
     currentArtist = findArtistByName(this.textContent)
   }
-  openModal();
-  artist.classList.remove('visually-hidden'); //  artist.style.display = 'flex';
+  //openModal();
+  myScroll.disable();
+  artist.scrollIntoView({block: "start", inline: "start" });
+  artist.classList.remove('visually-hidden');
   document.querySelector(".artist__action-exit").style.display = "block"
   artist.querySelector('.artist__img').src = currentArtist.image;
   artist.querySelector('.artist__name').innerHTML = currentArtist.name;
@@ -185,6 +175,7 @@ for (var i = 0; i < termLinks.length; i++) {
 }
 
 document.querySelector('.artist__action-exit').addEventListener("click", function() {
+  myScroll.enable();
   artist.classList.add('visually-hidden'); //    artist.style.display = 'none';;
   this.style.display = 'none';
   currentArtist = undefined;
@@ -313,7 +304,6 @@ toggleButton.addEventListener("click", function() {
   if (!toggled) {
     toggleButton.classList.add('filter_white')
     mobileNav.classList.remove("visually-hidden");
-    artist.classList.add('visually-hidden'); //   artist.style.display = 'none';
     document.querySelector(".artist__action-exit").style.display = 'none';
     sectionTitle.style.opacity = 0;
     currentArtist = undefined;
@@ -330,4 +320,14 @@ window.addEventListener('load', function() {
   document.querySelector(".modal-acknowledgment__action").style.opacity = 1;
 });
 
+document.addEventListener('touchstart', function (e) {
+  if(e.touches.length > 1) {
+      myScroll.disable();
+  }
+});
 
+document.addEventListener('touchend', function (e) {
+  if (artist.classList.contains('visually-hidden')) {
+    myScroll.enable();
+  }
+});
