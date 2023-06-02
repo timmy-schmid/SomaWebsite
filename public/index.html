@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0">
+    <title>Soma Music & Arts</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="scripts/iscroll-zoom.js"></script>
+</head>
+
+<body onload="loaded()">
+    <div class="modal-acknowledgment">
+        <p class="modal-acknowledgment__text">Acknowledgment of Country Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi dolor, dignissim nec semper ac, gravida dapibus neque. Donec vitae nibh vitae tellus efficitur venenatis. </p>
+        <div class="modal-acknowledgment__actions loader">
+            <button class="modal-acknowledgment__action" type="button">Enter</button>
+        </div>
+    </div>
+    <div class="modal-popup visually-hidden">
+        <div class="artist visually-hidden">
+            <div class="img-container">
+                <img class="artist__img" src="images/artist.png" alt="Artist Tile"></img>
+            </div>
+            <h3 class="artist__name"></h3>
+            <div class="artist__info">
+                <p class="artist__bio"></p>
+                <iframe class="artist__sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"></iframe>
+            </div>
+            <div class="artist__actions">
+                <button class="artist__action-back" type="button">PREV</button>
+                <p class="artist__id"></p>
+                <button class="artist__action-next" type="button">NEXT</button>
+
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#home" class="main-nav__brand scroll-link">
+                <img src="images/logo_02_s_blue.png" alt="Soma">
+            </a>
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="#artists" class="scroll-link">Artists</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#info" class="scroll-link">Info</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#sustainability" class="scroll-link">Sustainability</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#volunteer" class="scroll-link">Volunteer</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="https://www.humanitix.com">Tickets</a>
+                </li>
+            </ul>
+        </nav>
+        <audio id="audio" src="images/setwun.mp3" preload=”metadata” loop></audio>
+        <button class="toggle-music-mobile" type="button">
+            <img src="images/sound_off.svg" alt="Mobile Toggle">
+        </button>
+        <a href="#home" class="mobile-nav__brand scroll-link">
+            <img src="images/logo_02_s_blue.png" alt="Soma">
+        </a>
+        <button class="toggle-button">
+            <img src="images/mobile_nav_toggle.svg" alt="Mobile Toggle">
+        </button>
+        <p class="section_title"></p>
+        <button class="artist__action-exit" type="button">X</button>
+    </header>
+    <nav class="mobile-nav visually-hidden">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item--cta">
+                <a href="https://www.humanitix.com">Tickets</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#artists" class="scroll-link">Artists</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#info" class="scroll-link">Info</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#sustainability" class="scroll-link">Sustainability</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#volunteers" class="scroll-link">Volunteer</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#say-hi" class="scroll-link">Say hi</a>    
+            </li>
+        </ul>
+        <div class="main-nav__contacts">
+            <a href="https://instagram.com/soma__festival/" >
+                <img src="images/IG.svg" alt="Soma Instagram">
+            </a>
+            <a href="https://facebook.com/profile.php?id=100091915542764">
+                <img src="images/FB.svg" alt="Soma Facebook">
+            </a>
+            <a href="#say-hi" class="scroll-link">
+                <img src="images/EM.svg" alt="Soma Email">
+            </a>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <main id="scroller">
+            <section id="home">
+                <div class="vid_container">
+                    <video disableRemotePlayback playsinline autoplay loop muted class="feature-img">
+                        <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1685329658/soma/homepage_feature_f015zg.mp4" type="video/mp4;codecs=hvc1">
+                        <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1685329147/soma/homepage_feature_nrkrkr.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="vid_container">
+                    <video disableRemotePlayback playsinline autoplay muted class="home-logo">
+                        <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1685329538/soma/logo_uo2wwb.mp4" type="video/mp4;codecs=hvc1">
+                        <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/c_crop,h_500,w_1430,x_300,y_340/v1685329411/soma/logo_lw2w7p.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="home_text">
+                    <h1>30 Sep - 2 Oct 2023</h1>
+                    <p>3 days & 3 nights of music, art & self-expression</p>
+                    <p>Greenlands, Snowy Mountains region</p>      
+                </div>
+            </section>
+            <section id="artists">
+                <div class="img_container">
+                    <img src="images/artist.png" alt="Artist Tile">
+                </div>
+                <div class="test-popup"><p>test content</p></div>
+            </section>
+            <section id="info">
+                <div class="img_container">
+                    <img src="images/info.png" alt="Info Tile">
+                </div>
+                <p>General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3>Accessibility +</h3>
+                <p class="visually-hidden"> Accessibility info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="alternate">Accomodation +</h3>
+                <p class="visually-hidden">AccomodationEa ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3>Food & Drink +</h3>
+                <p class="visually-hidden">Food & Drink Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="alternate">Getting Here +</h3>
+                <p class="visually-hidden">Getting HereEa ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3>Safety +</h3>
+                <p class="visually-hidden">SafetyEa ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="alternate">Sustainability +</h3>
+                <p class="visually-hidden">Sustainability Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3>What to bring & not to bring +</h3>
+                <p class="visually-hidden">What to bring & not to bring Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="alternate">Ticketing +</h3>
+                <p class="visually-hidden">Ticketing Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+            </section>
+            <section id="sustainability">
+                <img src="images/sustainability.png" alt="Artist Tile">
+                <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="yellow-underline">What we're doing</h3>
+                <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h3 class="salmon-underline">How you can help</h3>
+                <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+            </section>
+            <section id="volunteers">
+                <h3">Volunteers</h3>
+                <p>General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <p>Volunteer Applications close at 5pm on Thursday 17 September</p>
+            </section>
+            <section id="say-hi">
+                <p>General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
+                <h4>Get in Touch</h4>
+                <p>info@soma-festival.com</p>
+                <h4>Follow Us</h4>
+                <p><a href="https://instagram.com/soma__festival/">Instagram</a></br>
+                <a href="https://facebook.com/profile.php?id=100091915542764">Facebook</a></p>
+                <h4>Copyright</h4>
+                <p>Soma Music & Arts Pty Ltd 2023</p>
+                <h4>Legal</h4>
+                <p class="terms-link"><a>Terms & Conditions</a></p>
+                <h4>Design</h4>
+                <p><a href="https://www.instagram.com/sammy__yee/">Sammy Yee</a>
+                <h4>Development</h4>
+                <p>Tim Schmid</p>
+            </section>
+        </main>
+    </div>
+    <div class="terms-popup visually-hidden">
+        <button class="terms__action-exit" type="button">X</button>
+        <h3>Terms and Conditions</h3>
+        <p>
+            The terms and conditions of entry into the Outer Step Festival are set out below. They contain important information about the event. They also set out the express basis of your entry to the event, which includes an indemnity and release in favour of the organisers. You should read these terms and conditions carefully. The terms and conditions of this agreement shall constitute a contract between Outer Step Pty Ltd (“Promoter”) trading as Outer Step Festival and the individual holding a ticket (“Ticket Holder(s)”) in relation to the event known as “Outer Step” held at Redlands, NSW in March 2019 (referred to as “the Event”). Any valid ticket purchased or given to a Ticket Holder in respect of the Event and a Ticket Holder’s entry to the Event and presence at the Event site (including the surrounding camping grounds and any other areas designated by the Promoter as part of the Event) is subject to the following terms and conditions:
+            <br><br>
+            REFUND POLICY
+            The Promoter will make decisions pursuant to this condition in good faith and attempt to notify Ticket Holders of any decisions regarding these matters. Notwithstanding, the Promoter retains the absolute discretion without limitation, to decide on these matters without notice or explanation to Ticket Holders. If the Promoter exercises any of these rights, no refund or compensation will be available to Ticket Holders.
+            <br>
+            Important – limitations on liability – read carefully:
+            Entry to and attendance at the Event is only permitted to Ticket Holders who agree to these terms and conditions and the festival rules displayed on site and communicated by the Promoter in any other formats, including any reasonable directions issued by the Promoter or on behalf of the Promoter by Event staff (Festival Rules). A copy of these terms and conditions are available online and from the Promoter upon request.
+            <br><br>
+            The Promoter reserves the right to refuse entry to or evict any person from the Event who does not comply with the terms and conditions and/or Festival Rules and/or is involved in an illegal activity and/or is responsible for any behaviour which is deemed by or on behalf of the Promoter to be anti-social or dangerous. If a Ticket Holder is refused entry to or evicted from the Event pursuant to this paragraph, no refunds will be issued to the Ticket Holder on any unused portion of the Ticket Holder’s ticket.
+            <br><br>
+            Outer Step is an over 18s event. Ticket Holders must show official proof of age photo identification in order to gain entry into the Event and at any other time when requested to by Event staff. No refund will be issued to any Ticket Holder who is refused entry to or evicted from the Event because of lack of or failure to produce valid proof of age photo identification. No ID. No entry.
+            <br><br>
+            If a Ticket Holder is unable to attend the Event, their ticket may be resold through any medium at the discretion of the Ticket Holder. Tickets may not be resold at a premium. If a ticket is sold or offered for resale at a premium over the original purchase price including handling costs, then the Promoter reserves the right to cancel the re-sold ticket without refund and without notice to both the original and new Ticket Holder and the bearer of the ticket may be refused admission to the Event.
+            <br><br>
+            Tickets must be presented at the gate. Failure to produce a ticket in order to gain entry into the Event will result in refusal of entry into the Event. When the ticket is presented to Event staff upon entry, the tickets will be exchanged for Event wristbands that must be worn by the Ticket Holder for the duration of the Event. The Promoter and Event staff reserve the right to evict anyone from the Event who is not wearing a valid Event wristband.
+            <br><br>
+            It is a condition of entry into the Event site that, upon request by the Promoter or by Event staff (either at the time of entry into the Event or at any other time during the Event), Ticket Holders will present themselves and any of their clothing, cars, bags or other containers for searching as directed. If a Ticket Holder does not consent to such searching as directed pursuant to this condition, then he or she may be denied entry to the Event or evicted from the Event site.
+            <br><br>
+            The following items are prohibited from the Event site: glass (does not include food containers and perfume bottles), illegal substances, flares, fireworks, explosives, fires, open flames of any kind, barbecues, gas bottles, animals (with the exception of registered guide dogs), knives and anything that could be used as a weapon (“Prohibited Items”). If a Ticket Holder is found to be carrying any of the Prohibited Items, the Promoter and Event staff are authorised to: May deny the Ticket Holder entry to the Event or evict the Ticket Holder from the Event site; and/or confiscate the item(s) which will not be returned, replaced or reimbursed to the Ticket Holder.
+            <br><br>
+            The Promoter and Event staff are authorised to ban anyone coming into the festival wearing a culturally offensive costume. Costumes such as black face and Indian headdresses are prohibited
+            <br><br>
+            All Ticket Holders must consume alcohol in a responsible way. The Promoter and Event staff have the right to evict from the Event Site any Ticket Holders who do not appear to be consuming alcohol in a responsible way.
+            <br><br>
+            Ticket Holders engaging in dangerous activities or behaving in a disorderly, offensive or inappropriate manner may be evicted from the Event site at the discretion of the Promoter and Event staff.
+            <br><br>
+            Ticket Holders must not operate, steal or cause damage to any property at the Event site which includes, but is not limited to, festival equipment or property, stage and lighting set-up, farm machinery and property and festival decorations and infrastructure. Ticket Holders engaging in dangerous or destructive behaviour causing damage or liable to cause damage to the Event site or any equipment or property belonging to or being used by the Promoter or the owner of the Event site, will be liable for any damage.
+            <br><br>
+            Day parking is available for ticket holders who will not be camping overnight.
+            <br><br>
+            There will be no vehicle pass outs for Ticket Holders staying in overnight parking. Once a Ticket Holder has parked his or her vehicle it must remain parked in that position until 9am Sunday 31st March at which time Ticket Holders must follow the direction of Event staff in order to move their vehicles from the Event site. In the event of a personal emergency and the Ticket Holder wants to leave the event site, the Ticket Holder must request permission from festival staff before being escorted out by festival staff safely.
+            <br><br>
+            Ticket holder must arrive between 9:00 and midnight Friday and 7:00– 22:00 Saturday
+            <br><br>
+            Ticket Holders are requested to leave the Event site by 12pm on Monday, 1st April. Designated drivers are responsible for ensuring that they are under the legal Blood Alcohol Concentration limit and in a state fit to drive.
+            <br><br>
+            Ticket Holders must attempt to leave the Event site in the way that they found it by not littering or causing damage to the grounds.
+            <br><br>
+            All Ticket Holders consent to any official sound recording, photos and filming at the Event and for these recordings and associated materials to be used by the Promoter in any medium or context without further authorisation from them.
+            <br><br>
+            Tickets to the Event, whether delivered by post or electronically, are the responsibility of the respective Ticket Holders and tickets which are stolen, lost or destroyed cannot be replaced. No refunds will be issued by the Promoter on lost tickets.
+            <br><br>
+            The Promoter retains the absolute right to, at any time and without notification to Ticket Holders, do the following:
+            <br><br>
+            add, withdraw, change, reschedule or substitute artists in the Event line-up and/or vary the advertised program of the Event; change the date of the Event or the location or venue of the Event; cancel the Event (in whole or in part) in the event of adverse weather conditions or forecasted adverse weather conditions.
+            <br><br>
+            If the event is cancelled in whole or in part for any other reason, including by Act Of God or act of war or industrial dispute or by any event outside the control of the Promoter (other than weather conditions) then refunds shall be at the Promoter’s absolute discretion. If a refund is available, the Promoter will determine the amount of the refund which will be subject to deductions for handling fees and costs incurred. Refunds or part refunds (if available) will only be paid pursuant to a written request by or on behalf of the Ticket Holder and if that request is accompanied by the original ticket and proof of purchase and presented within 60 days of the Ticket Holder being notified of the cancellation.
+            <br><br>
+            The Promoter will not be held liable for any loss, damage or compensation as a result of the Event being cancelled, postponed, relocated or changed for any reason. Own Risk: Entry to the Event site is at the Ticket Holder’s own risk and Ticket Holders must take reasonable care to protect themselves from harm during the Event and while on the Event site. Without limiting the generality of this condition, Ticket Holders must wear appropriate footwear and clothing at all times; must not mosh, crowd surf or stage dive; must not stray into cordoned-off areas or unmarked areas; must not climb trees; and must wear ear plugs, if necessary.
+            <br><br>
+            No Liability: The Promoter and/or Event site owner will not be liable or responsible for any injury, loss or damage suffered or incurred by the Ticket Holder whether caused by the negligence of the Promoter or that of the owner of the Event site (or any of their respective employees, contractors, or agents) or otherwise. Any such injury, loss or damage to a person or property is at the Ticket Holder’s own risk (including any hearing loss or damage caused by excessive noise). In the event of injury or illness, the Promoter is authorised, at the Ticket Holder’s own expense, to arrange medical treatment and/or emergency evacuation as required in the Promoter’s discretion. The Promoter will not be held liable for any injury, loss or damage occurring at the Festival site, so Ticket Holders are reminded that all valuables and personal property should be kept safe and secured.
+            <br><br>
+            Release: To the fullest extent permitted by law, Ticket Holders waive all legal rights of action against and fully release the Promoter and the owner of the Event site (and their respective executive members, directors, officers, employees, volunteers, contractors or agents) from any liability for any personal injury, loss, damage, death, economic loss or consequential loss for any default, failure or negligence (to the extent permitted by law) howsoever arising out of or in relation to the Ticket Holder’s entry to the Event and presence at the Event site. Indemnity: The Ticket Holder agrees to indemnify the Promoter and owner of the Event site against any injury, loss or damage that the Promoter and/or Event site owner may suffer arising out of a Ticket Holder’s negligence or breach of these terms and conditions.
+          </p>
+    </div>
+    <footer class="main-footer">
+        <h1 class="terms-link main-footer__terms"><a>T&C</a></h1>
+        <a href="https://instagram.com/soma__festival/" class="main-footer__contact">
+            <img src="images/IG.svg" alt="Soma Instagram">
+        </a>
+        <a href="https://facebook.com/profile.php?id=100091915542764" class="main-footer__contact">
+            <img src="images/FB.svg" alt="Soma Facebook">
+        </a>
+        <a href="#footer" class="main-footer__contact">
+            <img src="images/EM.svg" alt="Soma Email">
+        </a>
+    </footer>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>
