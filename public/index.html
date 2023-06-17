@@ -8,7 +8,7 @@
     <title>Soma Music & Arts</title>
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" src="scripts/iscroll-zoom.js"></script>
+    <script type="text/javascript" src="scripts/iscroll-lite.js"></script>
 </head>
 
 <body onload="loaded()">
@@ -21,7 +21,7 @@
     <div class="modal-popup visually-hidden">
         <div class="artist visually-hidden">
             <div class="img-container">
-                <img class="artist__img" src="images/artist.png" alt="Artist Tile"></img>
+                <img class="artist__img" src="images/01_Main.png" alt="Artist Tile"></img>
             </div>
             <h3 class="artist__name"></h3>
             <div class="artist__info">
@@ -32,7 +32,6 @@
                 <button class="artist__action-back" type="button">PREV</button>
                 <p class="artist__id"></p>
                 <button class="artist__action-next" type="button">NEXT</button>
-
             </div>
         </div>
     </div>
@@ -52,7 +51,7 @@
                     <a href="#sustainability" class="scroll-link">Sustainability</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="#volunteer" class="scroll-link">Volunteer</a>
+                    <a href="#volunteers" class="scroll-link">Volunteer</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="https://www.humanitix.com">Tickets</a>
@@ -127,15 +126,32 @@
                 </div>
             </section>
             <section id="artists">
-                <div class="img_container">
-                    <img src="images/artist.png" alt="Artist Tile">
+                <div class="all-artists">
+                    <div class="img_container">
+                        <img src="images/01_Main.png" alt="Artist Tile">
+                    </div>
+                    <h1>Artists</h1>
+                    <div class="artist-list"></div>
                 </div>
-                <div class="test-popup"><p>test content</p></div>
+                <div class="artist visually-hidden">
+                    <div class="img_container">
+                        <img class="artist__img" src="images/01_Main.png" alt="Artist Tile"></img>
+                    </div>
+                    <h3 class="artist__name"></h3>
+                    <div class="artist__info">
+                        <p class="artist__bio"></p>
+                        <iframe class="artist__sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"></iframe>
+                    </div>
+                    <div class="artist__actions">
+                        <button class="artist__action-back" type="button">PREV</button>
+                        <p class="artist__id"></p>
+                        <button class="artist__action-next" type="button">NEXT</button>
+                    </div>
+                </div>
             </section>
             <section id="info">
-                <div class="img_container">
-                    <img src="images/info.png" alt="Info Tile">
-                </div>
+                <img class="feature-img" src="images/info.png" alt="Info Tile">
+                <h1>Info</h1>
                 <p>General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
                 <h3>Accessibility +</h3>
                 <p class="visually-hidden"> Accessibility info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
@@ -155,7 +171,8 @@
                 <p class="visually-hidden">Ticketing Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
             </section>
             <section id="sustainability">
-                <img src="images/sustainability.png" alt="Artist Tile">
+                <img class="feature-img" src="images/sustainability.png" alt="Artist Tile">
+                <h1>Sustainability</h1>
                 <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
                 <h3 class="yellow-underline">What we're doing</h3>
                 <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
@@ -163,7 +180,7 @@
                 <p> General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
             </section>
             <section id="volunteers">
-                <h3">Volunteers</h3>
+                <h1>Volunteers</h1>
                 <p>General blurb about info Ea ipsum officia vel enim sequi quo maxime exercitationem qui quia magnam quo veniam consequatur et dicta galisum. General blurb about info Ea ipsum officia vel enim sequi quo maxime.</p>
                 <p>Volunteer Applications close at 5pm on Thursday 17 September</p>
             </section>
