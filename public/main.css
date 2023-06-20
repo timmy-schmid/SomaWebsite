@@ -47,7 +47,7 @@ body {
   font-family: "GradientGothic", sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
-  letter-spacing: .05rem;
+  letter-spacing: 0px;
 }
 
 section {
@@ -202,7 +202,7 @@ a {
 .modal-acknowledgment__action {
     opacity: 0;
     transition: opacity 2s;
-    font-family: "GradientGothic";
+    font-family: "VeracruzSerial";
     color: white;
     background: transparent;
     border: none;
@@ -211,7 +211,6 @@ a {
                 0rem 0rem 1rem white,
                 0rem 0rem 1rem white;
     padding: 0.5rem 1rem;
-    font: inherit;
     font-size: 2rem;
     cursor: pointer;
   }
@@ -219,7 +218,6 @@ a {
 .modal-acknowledgment__action:hover,
 .modal-acknowledgment__action:active {
   color: #283A97;
-  font-size: 2rem;
 }
 
 /* HEADER */
@@ -735,6 +733,14 @@ a {
 
   @media(min-width: 800px) {
 
+    p {
+      font-size: 20px;
+    }
+
+    .modal-acknowledgment__action {
+      font-size: 35px;
+    }
+
     .toggle-button {
       display: none;
     }
@@ -864,17 +870,7 @@ a {
   }
 
   @media(min-width: 1100px) {
-    p, .artist_bio {
-      font-size: 1.4rem;
-    }
 
-    h1 {
-      font-size:4rem;
-    }
-
-    h3 {
-      font-size: 2.5rem;
-    }
 
     .artist-list h3 {
       font-size: 1.6rem;
@@ -894,34 +890,11 @@ a {
 
   @media(min-width: 1600px) {
 
-    .artist-list h3 {
-      font-size: 2.2rem;
-    }
-
-    .artist-list h3:nth-of-type(even) a:hover{
-      box-shadow: 0 2.3rem 0.6rem 0.2rem rgba(197, 140, 104,0.8);
-      border-radius: 1rem;
-    } 
-    .artist-list h3:nth-of-type(odd) a:hover{
-      box-shadow: 0 2.3rem 0.6rem 0.2rem rgba(180, 189, 88, 0.8);
-      border-radius: 1rem;
-    }  
-
     .main-header {
       padding-bottom: 150px;
       margin-bottom: -150px;
     }
-    .main-nav__items {
-      font-size:1.8rem;
-    }
-    
-    .main-nav__brand img {
-      height: 3rem;
-    }
-    .main-nav__item:hover a,
-    .toggle-music:hover span {
-      box-shadow: 0 2.4rem 0.6rem 0.2rem rgba(197, 140, 104,0.6);
-    }
+
   }
   @media(min-width: 1800px) {
     #sustainability .feature-img {

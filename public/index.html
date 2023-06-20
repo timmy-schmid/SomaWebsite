@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4FMXJEEG8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B4FMXJEEG8');
+    </script>-->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0">
@@ -9,6 +20,32 @@
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="scripts/iscroll-lite.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAvjHxxFF9TyQBjJ5_6w-mks1eFn00R6uA",
+        authDomain: "soma-2023.firebaseapp.com",
+        projectId: "soma-2023",
+        storageBucket: "soma-2023.appspot.com",
+        messagingSenderId: "1088709556296",
+        appId: "1:1088709556296:web:02eda02909576de6ee007d",
+        measurementId: "G-B4FMXJEEG8"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      console.log(app);
+    </script>
+    <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
 
 <body onload="loaded()">
@@ -21,7 +58,7 @@
     <div class="modal-popup visually-hidden">
         <div class="artist visually-hidden">
             <div class="img-container">
-                <img class="artist__img" src="images/01_Main.png" alt="Artist Tile"></img>
+                <img class="artist__img" src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png" alt="Artist Tile"></img>
             </div>
             <h3 class="artist__name"></h3>
             <div class="artist__info">
@@ -128,14 +165,14 @@
             <section id="artists">
                 <div class="all-artists">
                     <div class="img_container">
-                        <img src="images/01_Main.png" alt="Artist Tile">
+                        <img src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png" alt="Artist Tile">
                     </div>
                     <h1>Artists</h1>
                     <div class="artist-list"></div>
                 </div>
                 <div class="artist visually-hidden">
                     <div class="img_container">
-                        <img class="artist__img" src="images/01_Main.png" alt="Artist Tile"></img>
+                        <img class="artist__img" src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png" alt="Artist Tile"></img>
                     </div>
                     <h3 class="artist__name"></h3>
                     <div class="artist__info">
@@ -273,7 +310,7 @@
             <img src="images/EM.svg" alt="Soma Email">
         </a>
     </footer>
-<script type="text/javascript" src="scripts/main.js"></script>
+
 </body>
 
 </html>
