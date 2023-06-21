@@ -11,6 +11,8 @@ var audioOn = false;
 var scrollLinks = document.querySelectorAll(".scroll-link");
 var infoSections = document.querySelectorAll("#info h3");
 var termLinks = document.querySelectorAll('.terms-link');
+var audioCredit = document.querySelector(".audio-credit");
+
 
 // ref https://github.com/WICG/EventListenerOptions/pull/30
 function isPassive() {
@@ -28,7 +30,6 @@ function isPassive() {
 /* PAGE OBSERVERS */
   
 function callback(entries, observer) {
-  console.log("DO I GET HERE");
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
      if (entry.target.id == 'home') {
@@ -277,7 +278,6 @@ function findArtistByName (name) {
 }
 
 function loadArtistElement(event) {
-  console.log(clicked);
   if (event || currentArtist === undefined) {
     currentArtist = findArtistByName(this.textContent)
   }
@@ -322,7 +322,6 @@ for (let i = 0; i < nextButton.length; i++) {
   nextButton[i].addEventListener("click", function() {
     prevArtistId = (currentArtist.id + 1) % 21;
     currentArtist = artists.get(prevArtistId);
-    console.log("HI");
     loadArtistElement();
   });
 }
@@ -436,7 +435,9 @@ function toggleSound() {
   if (audioOn) {
     soundButton.src = "images/sound_off.svg"
     document.getElementById("audio").pause();
+    audioCredit.style.opacity = 0;
   } else {
+    audioCredit.style.opacity = 1;
     soundButton.src = "images/sound_on.svg"
     document.getElementById("audio").play();
   }

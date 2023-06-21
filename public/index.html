@@ -2,17 +2,6 @@
 <html lang="en">
 
 <head>
-
-    <!-- Google tag (gtag.js) 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4FMXJEEG8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-B4FMXJEEG8');
-    </script>-->
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0">
@@ -21,15 +10,11 @@
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="scripts/iscroll-infinite.js"></script>
 
+    <!-- Firebase Integration -->
     <script type="module">
-      // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
     
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
         apiKey: "AIzaSyAvjHxxFF9TyQBjJ5_6w-mks1eFn00R6uA",
         authDomain: "soma-2023.firebaseapp.com",
@@ -40,11 +25,25 @@
         measurementId: "G-B4FMXJEEG8"
       };
     
-      // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
-      console.log(app);
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2149651875364267');
+      fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2149651875364267&ev=PageView&noscript=1"
+      /></noscript>
     <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
 
@@ -90,8 +89,8 @@
                 <li class="main-nav__item">
                     <a href="#volunteers" class="scroll-link">Volunteer</a>
                 </li>
-                <li class="main-nav__item">
-                    <a href="https://www.humanitix.com">Tickets</a>
+                <li class="main-nav__item--cta">
+                    <a href="https://events.humanitix.com/soma" target="_blank">Tickets</a>
                 </li>
             </ul>
         </nav>
@@ -108,10 +107,13 @@
         <p class="section_title"></p>
         <button class="artist__action-exit" type="button">X</button>
     </header>
+    <div class="audio-credit">
+      <p><a href="https://soundcloud.com/iokiii" target="_blank">Music By ioki</p>
+    </div>
     <nav class="mobile-nav visually-hidden">
         <ul class="mobile-nav__items">
             <li class="mobile-nav__item--cta">
-                <a href="https://www.humanitix.com">Tickets</a>
+                <a href="https://events.humanitix.com/soma" target="_blank">Tickets</a>
             </li>
             <li class="mobile-nav__item">
                 <a href="#artists" class="scroll-link">Artists</a>
@@ -130,10 +132,10 @@
             </li>
         </ul>
         <div class="main-nav__contacts">
-            <a href="https://instagram.com/soma__festival/" >
+            <a href="https://instagram.com/soma__festival/" target="_blank">
                 <img src="images/IG.svg" alt="Soma Instagram">
             </a>
-            <a href="https://facebook.com/profile.php?id=100091915542764">
+            <a href="https://www.facebook.com/soma.music.festival" target="_blank">
                 <img src="images/FB.svg" alt="Soma Facebook">
             </a>
             <a href="#say-hi" class="scroll-link">
@@ -232,8 +234,8 @@
                   </div>
                   <div class="say-hi__element">
                     <h4>Follow Us</h4>
-                    <p><a href="https://instagram.com/soma__festival/">Instagram</a></br>
-                    <a href="https://facebook.com/profile.php?id=100091915542764">Facebook</a></p>
+                    <p><a href="https://instagram.com/soma__festival/" target="_blank">Instagram</a></br>
+                    <a href="https://www.facebook.com/soma.music.festival" target="_blank">Facebook</a></p>
                   </div>
                   <div class="say-hi__element">
                     <h4>Copyright</h4>
@@ -245,7 +247,7 @@
                   </div>
                   <div class="say-hi__element">
                     <h4>Designer</h4>
-                    <p><a href="https://www.instagram.com/sammy__yee/">Sammy Yee</a>
+                    <p><a href="https://www.instagram.com/sammy__yee/" target="_blank">Sammy Yee</a></p>
                   </div>
                   <div class="say-hi__element">
                     <h4>Developer</h4>
@@ -253,7 +255,7 @@
                   </div>
                   <div class="say-hi__element">
                     <h4>Music By</h4>
-                    <p><a href="https://www.instagram.com/ioki______/">ioki</a>
+                    <p><a href="https://soundcloud.com/iokiii" target="_blank">ioki</a></p>
                   </div>
               </div>
             </section>
@@ -320,10 +322,10 @@
     </div>
     <footer class="main-footer">
         <h1 class="terms-link main-footer__terms"><a>T&C</a></h1>
-        <a href="https://instagram.com/soma__festival/" class="main-footer__contact">
+        <a href="https://instagram.com/soma__festival/" target="_blank" class="main-footer__contact">
             <img src="images/IG.svg" alt="Soma Instagram">
         </a>
-        <a href="https://facebook.com/profile.php?id=100091915542764" class="main-footer__contact">
+        <a href="https://facebook.com/profile.php?id=100091915542764" target="_blank" class="main-footer__contact">
             <img src="images/FB.svg" alt="Soma Facebook">
         </a>
         <a href="#say-hi" class="scroll-link main-footer__contact">
