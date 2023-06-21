@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "GradientGothic";
-  src: url(fonts/GradientGothicPremium-Thin.woff) format("woff2");
-  /*src: url(fonts/gradientgothicpremium-light.ttf) format("truetype");*/
+  /*src: url(fonts/GradientGothicPremium-Thin.woff) format("woff2");*/
+  src: url(fonts/gradientgothicpremium-light.ttf) format("truetype");
 }
 
 @font-face {
@@ -462,6 +462,7 @@ a {
     left: 0;
     justify-content: end;
     padding: 4rem 2rem;
+    padding-top: 0;
   }
 
   .main-footer__terms {
@@ -571,6 +572,10 @@ a {
   .all-artists {
     display: flex;
     flex-direction: column;
+  }
+
+  .artist-list a {
+    text-shadow: 0rem 0rem 1rem white;
   }
 
 
@@ -717,12 +722,16 @@ a {
 
   /* SECTION - SAY-HI */
   #say-hi {
-    left: 0;
-    top: calc(5*1080px);
+    left: calc(1.8*1920px);
+    top: calc(7*1080px);
     height: auto;
     align-items: flex-start;
     padding: 2rem;
     padding-top: 6.5rem;
+  }
+
+  .say-hi__bar {
+    display:none;
   }
 
   #say-hi p {
@@ -819,10 +828,12 @@ a {
 
     .artist-list h3:nth-of-type(even) a:hover{
       box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104,0.8);
+      text-shadow: none;
       border-radius: 1rem;
     } 
     .artist-list h3:nth-of-type(odd) a:hover{
       box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(180, 189, 88, 0.8);
+      text-shadow: none;
       border-radius: 1rem;
     }  
 
@@ -867,6 +878,48 @@ a {
       top: 15%;
       left: -7%;
     }
+
+    /* SECTION - SAY-HI */
+    #say-hi {
+      height: 100vh;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .say-hi__intro {
+      width: 70vw;
+      font-size:20px;
+    }
+
+    .say-hi__elements {
+      display:flex;
+      flex-direction: row;
+      width: 70vw;
+    }
+
+    .say-hi__element {
+      flex: 1 1 0;
+      padding-right:1rem;
+    }
+
+    .say-hi__element h4 {
+      font-size:15px;
+    }
+
+    .say-hi__element p {
+      font-size:13px;
+    }
+
+    .say-hi__bar {
+      display: flex;
+      width: 70vw;
+      height: 1.2rem;
+      background-image: url(images/footer_bar.jpg);
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+    }
   }
 
   @media(min-width: 1100px) {
@@ -883,9 +936,9 @@ a {
 
 
   @media(min-width: 1200px) {
-  #sustainability .feature-img {
-    left: -5%;
-  }
+    #sustainability .feature-img {
+      left: -5%;
+    }
   }
 
   @media(min-width: 1600px) {
@@ -915,6 +968,4 @@ a {
     .home_text {
       padding-right: 2rem;
     }
-    
   }
-

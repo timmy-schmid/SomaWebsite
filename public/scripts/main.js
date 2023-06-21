@@ -116,28 +116,136 @@ function loadArtistDOM(value,key,map) {
 
 var artists = new Map();
 
-artists.set(0,{id:0, name: 'Acopia (LIVE)', bio:"50 words dolor sit amet, consectetur adipiscing elit. Phasellus eu magna sodales, iaculis ex nec, finibus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut finibus et ligula gravida suscipit. Nulla auctor tempor elit, vitae ornare velit viverra ut. Nulla tristique ligula et nulla.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1202126179})
-artists.set(1,{id:1, name: 'akka', bio:"60 words dolor sit amet, consectetur adipiscing elit. Phasellus est urna, pulvinar in blandit eu, consequat lacinia turpis. Nulla facilisi. Vivamus volutpat nisi vel aliquam convallis. Etiam sed est sit amet ipsum varius faucibus at vitae ligula. Nulla laoreet feugiat tristique. Nullam vitae arcu sit amet elit porta malesuada. Praesent sit amet turpis et turpis congue tincidunt. Vestibulum dolor augue.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982353/soma/Akka_pg4oit.png', sc: 1231299577})
-artists.set(2,{id:2,name: 'Ben Fester', bio:"70 words dolor sit amet, consectetur adipiscing elit. Cras eget maximus neque, vitae dignissim velit. Ut ut hendrerit enim. Praesent vel leo ipsum. Nullam et semper elit. Nunc dolor urna, accumsan eu lectus sed, accumsan imperdiet odio. Sed rhoncus nunc sed accumsan placerat. Nunc vel orci tempus, commodo justo tempus, volutpat tortor. Morbi maximus urna diam, semper lacinia metus luctus vel. Pellentesque at enim mauris. Quisque convallis a lorem a.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(3,{id:3,name: 'Cured Pink (LIVE)', bio:"Rhythm. Sound. Musical histories of Jamaica and the UK provided in illusive, spaced out trips. Pulling from all corners of dub, jungle, bass and beyond, Ryan Hunter (Midnight Tenderness) and Rory McPike (Rings Around Saturn) will have no issues getting us where we need to go.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687238971/soma/Cured_Pink_lksmz1.png', sc: 1231299577})
-artists.set(4,{id:4,name: 'D-Grade & imbi (HYBRID)', bio:"The powerhouse duo of Rainbow Chan (also Chunyin) and Alex Ward (Moon Holiday) offer a brash, irreverent and unpretentious DIY delivery of pop leaning electro soundscapes. Effortless and intimate, driven by ethic, immune to bullshit.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(5,{id:5,name: 'Darcy Justice', bio:"Sydney’s favourite do has been shouting out loud his local scene through his co-run label Ken Oath and party series Rimbombo, as well as his new label and radio program, Best Effort (Sky Lounge). A superior digger and mood setter. Pulling from all corners, he can set almost any scene.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982402/soma/Darcy_Justice_02_s0db1s.png', sc: 1231299577})
-artists.set(6,{id:6,name: 'DJ Paramat', bio:"It’s rare to leave a Fabrics set without feeling as though you’ve delved into some sort of lowkey existential pondering. Their emotionally charged sets, full of pulsing, textural progressions, offer a consistent energy and pace that pull you along with it, no questions asked.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982355/soma/Dj_Paramat_u3lfns.png', sc: 1231299577})
-artists.set(7,{id:7,name: 'Emelyne', bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982352/soma/Emelyne_bm5abf.png', sc: 1231299577})
-artists.set(8,{id:8,name: 'Facta & K-Lone (UK)', bio:"Fuelled by high energy, higher calibre selects, DJ Sarah and Georgia Bird display a defiant drive built on a deep appreciation of breaks, jungle and the tougher edge of the Motor City sound. Sliding through with Drexciyan precision, this pair loosen and transport dancefloors with relative ease. Non stop bop.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(9,{id:9,name: 'Genie', bio:"IV Drip is a Sydney based DJ who won’t be limited by genre bounds, but holds a high affiliation for glitchy electro and breaks. She’s a regular fixture in the Sydney rave scene and has played support for Delta Funktionen, Madam X and Nite Fleit.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(10,{id:10,name: 'ioki (LIVE)', bio:"Fuelled by high energy, higher calibre selects, DJ Sarah and Georgia Bird display a defiant drive built on a deep appreciation of breaks, jungle and the tougher edge of the Motor City sound. Sliding through with Drexciyan precision, this pair loosen and transport dancefloors with relative ease. Non stop bop.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(11,{id:11,name: 'Jossy Mitsu (UK)', bio:"Nat James’ obsession with collecting records leans toward the left-field and experimental. Recent supports include Simo Cell and Moopie, as well as mixes for Apsis & Steeplejack that have only left us wanting more.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(12,{id:12,name: 'Mike Midnight', bio:"The powerhouse duo of Rainbow Chan (also Chunyin) and Alex Ward (Moon Holiday) offer a brash, irreverent and unpretentious DIY delivery of pop leaning electro soundscapes. Effortless and intimate, driven by ethic, immune to bullshit.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982342/soma/Mike_Midnight_top83a.png', sc: 1231299577})
-artists.set(13,{id:13,name: 'Moopie', bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(14,{id:14,name: 'Nat James', bio:"It’s rare to leave a Fabrics set without feeling as though you’ve delved into some sort of lowkey existential pondering. Their emotionally charged sets, full of pulsing, textural progressions, offer a consistent energy and pace that pull you along with it, no questions asked.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982352/soma/Nat_James_agwugk.png', sc: 1231299577})
-artists.set(15,{id:15,name: 'Natalia', bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982395/soma/Natalia_02_gkjbyo.png', sc: 1231299577})
-artists.set(16,{id:16,name: 'salllvage (LIVE)', bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(17,{id:17,name: 'Setwun', bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(18,{id:18,name: 'Tangela', bio:"Recently joining forces having both released on Sydney’s Black Wattle, this pair knows how to map out a truly unique sonic journey. Traversing ambient jaunts with ethereal steps and overwhelming hypnosis, Tom & Liam will bring in the rise, Sunday morning.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(19,{id:19,name: 'Tim Boyd', bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687241516/soma/Artist_Empty_oyahnq.png', sc: 1231299577})
-artists.set(20,{id:20,name: 'Yikes', bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.", image: 'https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1686982358/soma/Yikes_02_ghjuvz.png', sc: 1231299577})
+function joinArtistURL(artistURL) {
+ return "https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/" + artistURL;
+}
 
+
+artists.set(0,{id:0,
+               name: 'Acopia (LIVE)',
+               bio:"50 words dolor sit amet, consectetur adipiscing elit. Phasellus eu magna sodales, iaculis ex nec, finibus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut finibus et ligula gravida suscipit. Nulla auctor tempor elit, vitae ornare velit viverra ut. Nulla tristique ligula et nulla.", 
+               image: joinArtistURL('v1687322243/soma/Acopia_02_lu1vbp.png'),
+               sc: 1202126179})
+
+artists.set(1,{id:1,
+               name: 'akka',
+               bio:"60 words dolor sit amet, consectetur adipiscing elit. Phasellus est urna, pulvinar in blandit eu, consequat lacinia turpis. Nulla facilisi. Vivamus volutpat nisi vel aliquam convallis. Etiam sed est sit amet ipsum varius faucibus at vitae ligula. Nulla laoreet feugiat tristique. Nullam vitae arcu sit amet elit porta malesuada. Praesent sit amet turpis et turpis congue tincidunt. Vestibulum dolor augue.",
+               image: joinArtistURL('v1686982353/soma/Akka_pg4oit.png'),
+               sc: 1231299577})
+
+artists.set(2,{id:2,
+               name: 'Ben Fester',
+               bio:"70 words dolor sit amet, consectetur adipiscing elit. Cras eget maximus neque, vitae dignissim velit. Ut ut hendrerit enim. Praesent vel leo ipsum. Nullam et semper elit. Nunc dolor urna, accumsan eu lectus sed, accumsan imperdiet odio. Sed rhoncus nunc sed accumsan placerat. Nunc vel orci tempus, commodo justo tempus, volutpat tortor. Morbi maximus urna diam, semper lacinia metus luctus vel. Pellentesque at enim mauris. Quisque convallis a lorem a.",
+               image: joinArtistURL('v1687322250/soma/Ben_Fester_wvm105.png'),
+               sc: 1231299577})
+
+artists.set(3,{id:3,
+               name: 'Cured Pink (LIVE)',
+               bio:"Rhythm. Sound. Musical histories of Jamaica and the UK provided in illusive, spaced out trips. Pulling from all corners of dub, jungle, bass and beyond, Ryan Hunter (Midnight Tenderness) and Rory McPike (Rings Around Saturn) will have no issues getting us where we need to go.",
+               image: joinArtistURL('v1687238971/soma/Cured_Pink_lksmz1.png'),
+               sc: 1231299577})
+
+artists.set(4,{id:4,
+               name: 'D-Grade & imbi (HYBRID)',
+               bio:"The powerhouse duo of Rainbow Chan (also Chunyin) and Alex Ward (Moon Holiday) offer a brash, irreverent and unpretentious DIY delivery of pop leaning electro soundscapes. Effortless and intimate, driven by ethic, immune to bullshit.",
+               image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+               sc: 1231299577})
+
+artists.set(5,{id:5,
+               name: 'Darcy Justice',
+               bio:"Sydney’s favourite do has been shouting out loud his local scene through his co-run label Ken Oath and party series Rimbombo, as well as his new label and radio program, Best Effort (Sky Lounge). A superior digger and mood setter. Pulling from all corners, he can set almost any scene.",
+               image: joinArtistURL('v1687322364/soma/Darcy_Justice_psegjp.png'),
+               sc: 1231299577})
+
+artists.set(6,{id:6,
+               name: 'DJ Paramat',
+               bio:"It’s rare to leave a Fabrics set without feeling as though you’ve delved into some sort of lowkey existential pondering. Their emotionally charged sets, full of pulsing, textural progressions, offer a consistent energy and pace that pull you along with it, no questions asked.",
+               image: joinArtistURL('v1686982355/soma/Dj_Paramat_u3lfns.png'),
+               sc: 1231299577})
+
+artists.set(7,{id:7,
+               name: 'Emelyne',
+               bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.",
+               image: joinArtistURL('v1686982352/soma/Emelyne_bm5abf.png'),
+               sc: 1231299577})
+
+artists.set(8,{id:8,
+               name: 'Facta & K-Lone (UK)',
+               bio:"Fuelled by high energy, higher calibre selects, DJ Sarah and Georgia Bird display a defiant drive built on a deep appreciation of breaks, jungle and the tougher edge of the Motor City sound. Sliding through with Drexciyan precision, this pair loosen and transport dancefloors with relative ease. Non stop bop.",
+               image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+               sc: 1231299577})
+
+artists.set(9,{id:9,
+               name: 'Genie',
+               bio:"IV Drip is a Sydney based DJ who won’t be limited by genre bounds, but holds a high affiliation for glitchy electro and breaks. She’s a regular fixture in the Sydney rave scene and has played support for Delta Funktionen, Madam X and Nite Fleit.",
+               image: joinArtistURL('v1687322263/soma/Genie_uzdngx.png'),
+               sc: 1231299577})
+
+artists.set(10,{id:10,
+                name: 'ioki (LIVE)',
+                bio:"Fuelled by high energy, higher calibre selects, DJ Sarah and Georgia Bird display a defiant drive built on a deep appreciation of breaks, jungle and the tougher edge of the Motor City sound. Sliding through with Drexciyan precision, this pair loosen and transport dancefloors with relative ease. Non stop bop.",
+                image: joinArtistURL('v1687322268/soma/ioki_f2lbxl.png'),
+                sc: 1231299577})
+
+artists.set(11,{id:11,
+                name: 'Jossy Mitsu (UK)',
+                bio:"Nat James’ obsession with collecting records leans toward the left-field and experimental. Recent supports include Simo Cell and Moopie, as well as mixes for Apsis & Steeplejack that have only left us wanting more.",
+                image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+                sc: 1231299577})
+                
+artists.set(12,{id:12,
+                name: 'Mike Midnight',
+                bio:"The powerhouse duo of Rainbow Chan (also Chunyin) and Alex Ward (Moon Holiday) offer a brash, irreverent and unpretentious DIY delivery of pop leaning electro soundscapes. Effortless and intimate, driven by ethic, immune to bullshit.",
+                image: joinArtistURL('v1687322414/soma/Mike_Midnight_02_cxokpr.png'),
+                sc: 1231299577})
+
+artists.set(13,{id:13,
+                name: 'Moopie',
+                bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.",
+                image: joinArtistURL('v1687322273/soma/Moopie_xgfqit.png'),
+                sc: 1231299577})
+
+artists.set(14,{id:14,
+                name: 'Nat James',
+                bio:"It’s rare to leave a Fabrics set without feeling as though you’ve delved into some sort of lowkey existential pondering. Their emotionally charged sets, full of pulsing, textural progressions, offer a consistent energy and pace that pull you along with it, no questions asked.",
+                image: joinArtistURL('v1687322526/soma/Nat_James_e3qzl9.png'),
+                sc: 1231299577})
+
+artists.set(15,{id:15,
+                name: 'Natalia',
+                bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.",
+                image: joinArtistURL('v1687322451/soma/Natalia_02_ol6ekx.png'),
+                sc: 1231299577})
+
+artists.set(16,{id:16,
+                name: 'salllvage (LIVE)',
+                bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.",
+                image: joinArtistURL('v1687322555/soma/salllvage_01_etsgqc.png'),
+                sc: 1231299577})
+
+artists.set(17,{id:17,
+                name: 'Setwun',
+                bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.",
+                image: joinArtistURL('v1687322563/soma/Setwun_02_bv4fvu.png'),
+                sc: 1231299577})
+
+artists.set(18,{id:18,
+                name: 'Tangela',
+                bio:"Recently joining forces having both released on Sydney’s Black Wattle, this pair knows how to map out a truly unique sonic journey. Traversing ambient jaunts with ethereal steps and overwhelming hypnosis, Tom & Liam will bring in the rise, Sunday morning.",
+                image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+                sc: 1231299577})
+
+artists.set(19,{id:19,
+                name: 'Tim Boyd',
+                bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.",
+                image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+                sc: 1231299577})
+
+artists.set(20,{id:20,
+                name: 'Yikes',
+                bio:"Prepped for any occasion, and always on the textural tip. One of the masterminds behind the infamous Pickle crew out of Canberra, FB Perimeter knows how to put out a niche spread for the masses. Balanced for both the body and mind.",
+                image: joinArtistURL('v1687322477/soma/Yikes_oksuhd.png'),
+                sc: 1231299577})
 
 artists.forEach(loadArtistDOM)
 
