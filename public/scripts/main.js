@@ -149,7 +149,7 @@ artists.set(3,{id:3,
 artists.set(4,{id:4,
                name: 'D-Grade & imbi (HYBRID)',
                bio:"The powerhouse duo of Rainbow Chan (also Chunyin) and Alex Ward (Moon Holiday) offer a brash, irreverent and unpretentious DIY delivery of pop leaning electro soundscapes. Effortless and intimate, driven by ethic, immune to bullshit.",
-               image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+               image: joinArtistURL('v1687360488/soma/D-Grade_imbi_01_ivutba.png'),
                sc: 1231299577})
 
 artists.set(5,{id:5,
@@ -233,13 +233,13 @@ artists.set(17,{id:17,
 artists.set(18,{id:18,
                 name: 'Tangela',
                 bio:"Recently joining forces having both released on Sydney’s Black Wattle, this pair knows how to map out a truly unique sonic journey. Traversing ambient jaunts with ethereal steps and overwhelming hypnosis, Tom & Liam will bring in the rise, Sunday morning.",
-                image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+                image: joinArtistURL('v1687360510/soma/Tangela_p4miv9.png'),
                 sc: 1231299577})
 
 artists.set(19,{id:19,
                 name: 'Tim Boyd',
                 bio:"Always across all things experimental, Shoeb Ahmad (Tangents, Spartak, Agency) is hard to pin down. Consistently offering performances with a considered ambiance and subtle political urgency, Shoeb will be delivering a unique performance not to be missed.",
-                image: joinArtistURL('v1687241516/soma/Artist_Empty_oyahnq.png'),
+                image: joinArtistURL('v1687360515/soma/Tim_Boyd_atfdy9.png'),
                 sc: 1231299577})
 
 artists.set(20,{id:20,
