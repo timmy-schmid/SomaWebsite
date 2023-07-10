@@ -8,13 +8,11 @@
 */
 @font-face {
   font-family: "GradientGothic";
-  src: url(fonts/GradientGothicPremium-Thin.woff) format("woff2");
-  /*src: url(fonts/gradientgothicpremium-light.ttf) format("truetype");*/
+  src: url("fonts/GradientGothicPremium-Thin.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "VeracruzSerial";
-  /*src: url(fonts/veracruz-serial-light-regular.ttf) format("truetype"); OLD FONT*/ 
   src: url("fonts/veracruz-xlight 2.otf") format("opentype");
 }
 
@@ -792,9 +790,17 @@ a {
     margin: 0 2rem;
   }
 
+  #info h3 {
+    padding-bottom: 0.2rem;
+  }
+
   #info span {
     text-shadow: 0rem 0rem 1rem white,
     0rem 0rem 1rem white;
+  }
+
+  #info div {
+    margin-bottom: 23px;
   }
 
   #info .feature-img {
@@ -1109,9 +1115,11 @@ a {
       z-index:-1;
       position: absolute;
       max-width: 400px;
-      top: 200px;
+      top: 14rem;
       left: 50px;
     }
+
+
 
     #sustainability .feature-img {
       width: 60%;

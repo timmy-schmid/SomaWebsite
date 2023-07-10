@@ -12,20 +12,7 @@ var scrollLinks = document.querySelectorAll(".scroll-link");
 var infoSections = document.querySelectorAll("#info h3");
 var termLinks = document.querySelectorAll('.terms-link');
 var audioCredit = document.querySelector(".audio-credit");
-
-
-// ref https://github.com/WICG/EventListenerOptions/pull/30
-function isPassive() {
-  var supportsPassiveOption = false;
-  try {
-      addEventListener("test", null, Object.defineProperty({}, 'passive', {
-          get: function () {
-              supportsPassiveOption = true;
-          }
-      }));
-  } catch(e) {}
-  return supportsPassiveOption;
-}
+var audio = document.getElementById("audio");
 
 /* PAGE OBSERVERS */
   
@@ -49,38 +36,36 @@ function callback(entries, observer) {
  });
 }
 
-
-
 function createObserver(targets, callback) {
   const options = {
     root: null,
     threshold: 0
   };
-  //var observers = [];
   for (var i = 0; i < targets.length; i++) {
     const observer = new IntersectionObserver(callback, options);
     observer.observe(targets[i]); 
-    //observers.push({obs: new IntersectionObserver(callback, options),target:targets[i]});
   } 
-  //return observers;
 }
 createObserver(sections, callback);
-//var observers = createObserver(sections, callback);
 
-/*
-function resumeObservers() {
-  for (var i = 0; i < observers.length; i++) {
-    observers[i].obs.observe(observers[i].target);
-    console.log(observers[i]);
-  }
+/* VIDEO OBSERVERS */
+var vids = document.querySelectorAll("video");
+
+function vid_callback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      entry.target.play();
+    } else {
+      entry.target.pause();
+      entry.target.currentTime = 0;
+   }
+ });
 }
 
-function pauseObservers() {
-  for (var i = 0; i < observers.length; i++) {
-    observers[i].obs.unobserve(observers[i].target);
-  } 
-}*/
-//resumeObservers();
+createObserver(vids, vid_callback);
+
+/* ISCROLL SETUP */
+
 var myScroll;
 function loaded () {
     myScroll = new IScroll('#wrapper', {
@@ -91,8 +76,6 @@ function loaded () {
       startX: -3*1920,
       startY: -2.1*1080,
       zoom: false});
-    //myScroll.on('scrollStart', pauseObservers);
-    //myScroll.on('scrollEnd', resumeObservers);
 }
 
 document.addEventListener('touchstart', function (e) {
@@ -105,37 +88,14 @@ document.addEventListener('touchend', function (e) {
   myScroll.enable();
 });
 
-/*artist stuff */
+/* ARTIST DATA AND MANIPULATION */
 let artistSection = document.querySelector('.artist-list');
-function loadArtistDOM(value,key,map) {
-    const heading = document.createElement("h2");
-    const link = document.createElement("a");
-    const artistName = document.createTextNode(value.name);
-
-    heading.appendChild(link);
-    link.appendChild(artistName);
-    if (value.type !== undefined) {
-      const artistType = document.createTextNode(' ' + value.type);
-      const sup = document.createElement("sup");
-      sup.appendChild(artistType);
-      link.appendChild(sup);
-    }
-
-    if (value.country !== undefined) {
-      const country = document.createTextNode(' ' + value.country);
-      const span = document.createElement("span");
-      span.appendChild(country);
-      link.appendChild(span);
-    }
-    artistSection.appendChild(heading);
-}
 
 var artists = new Map();
 
 function joinArtistURL(artistURL) {
  return "https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/" + artistURL;
 }
-
 
 artists.set(0,{id:0,
                name: 'Acopia',
@@ -152,7 +112,7 @@ artists.set(1,{id:1,
                
 artists.set(2,{id:2,
                name: 'Ben Fester',
-               bio:"Missing",
+               bio: "Ben Fester is a staple of the Eora/Sydney electronic scene, with one of the most the most considered and extensive record collections. He has run the revered Heavenly parties for the last 10 years, having hosted Priori, Detroit in Effect, Bjorn Torske, Roza Terenzi and more, whilst also supporting the likes of Omar S, the Sex Tags crew, Marcellus Pittman, Ben UFO, Kyle Hall and Move D. The depths of his musical knowledge never cease to surprise, so expect the unexpected.",
                image: joinArtistURL('v1687322250/soma/Ben_Fester_wvm105.png'),
                sc: 1111704550})
 
@@ -184,14 +144,14 @@ artists.set(6,{id:6,
 
 artists.set(7,{id:7,
                name: 'Emelyne',
-               bio:"Missing",
+               bio:"Emelyne is an active force within Naarm’s vibrant music scene. Her one-of-a-kind energy and enthusiasm around music bring people together. Emelyne’s diverse array of mixes exhibit her passion and natural craft, each mix in its own dimension, known for taking you through sonic spaces where listeners can plunge into for hours. She’s a sucker for the sweetest slow jams, the deepest darkest low-end frequencies, largely influenced by sound system culture with roots in jazz and punk.",
                image: joinArtistURL('v1686982352/soma/Emelyne_bm5abf.png'),
                sc: 1128361369})
 
 artists.set(8,{id:8,
                name: 'Facta & K-Lone',
                country: '(UK)',
-               bio:"Missing",
+               bio:"We’re thrilled to have Bristol-based, Wisdom Teeth label heads Facta & K-Lone grace Australian shores for Soma 2023. Since its inception in 2014, the label has grown to become a globally recognised & respected imprint, releasing contemporary club music, experimental, ambient and downtempo from a roster of leading innovators including Tristan Arp, Lurka, Parris, Simo Cell & Hodge. With an adventurous palette, together their mixes seamlessly traverse genres, tempos, textures & moods, leaning both into and back out of the London & Bristol-centric styles of their past and present hometowns.",
                image: joinArtistURL('v1687447286/soma/Facta_K-Lone_zssz28.png'),
                sc: 1327093297})
 
@@ -204,7 +164,7 @@ artists.set(9,{id:9,
 artists.set(10,{id:10,
                 name: 'ioki',
                 type: '(LIVE)',
-                bio:"ioki is a multi-disciplinary artist, creating things with sound and other materials, working primarily on unceded Ngunnawal and Ngambri land. Their mixes and sound works are a warm embrace - ebbing and flowing delicately through imagined landscapes; sounds often kaleiding in maximalist, post-club, euphoric wonder, against a bed of ambient textural organics. Deeply committed to community, ioki developed the [portal] collective, which operates as a freelance creative agency fulfilling a broad schedule of diverse and inclusive music+arts related events.",
+                bio:"ioki is a multi-disciplinary artist, creating things with sound and other materials, working primarily on unceded Ngunnawal and Ngambri land. Their mixes and sound works are a warm embrace - ebbing and flowing delicately through imagined landscapes; sounds often colliding in maximalist, post-club, euphoric wonder, against a bed of ambient textural organics. Deeply committed to community, ioki developed the [portal] collective, which operates as a freelance creative agency fulfilling a broad schedule of diverse and inclusive music+arts related events.",
                 image: joinArtistURL('v1687322268/soma/ioki_f2lbxl.png'),
                 sc: 1503579088})
 
@@ -223,7 +183,7 @@ artists.set(12,{id:12,
 
 artists.set(13,{id:13,
                 name: 'Moopie',
-                bio:"Missing",
+                bio:"Weaving different eras, crossing genre boundaries and tirelessly connecting artists from bourgeoning micro-scenes, Naarm-based Moopie stands out as a uniquely creative force. Moopie is a specialist DJ, label boss of A Colourful Storm and a singular voice within contemporary electronic music. The sharing of musical discovery remains at his core. Developing his sound and playing at festivals (Dekmantel, Nachtigital, Pitch) and clubs (Berghain Kantine, Tresor, Globus) along the way, Moopie’s  sets are a journey through time, space & emotion - sure to keep you moving.",
                 image: joinArtistURL('v1687322273/soma/Moopie_xgfqit.png'),
                 sc: 1115006746})
 
@@ -244,7 +204,7 @@ artists.set(16,{id:16,
                 type: '(LIVE)',
                 bio:"salllvage (Rowan Savage) is a proud Kombumerri man, living on Wangal Land. He is an experimental producer and DJ working at the intersection of queer club culture and connection with Country. His work mutates on-Country field recordings into electronica, and inhabits and bridges the tensions between abstraction and emotion, the wild bush and the dancefloor, the personal and the social, authenticity and reconstruction.",
                 image: joinArtistURL('v1687322555/soma/salllvage_01_etsgqc.png'),
-                sc: 1446957679})
+                sc: 1252600033})
 
 artists.set(17,{id:17,
                 name: 'Setwun',
@@ -269,17 +229,6 @@ artists.set(20,{id:20,
                 bio:"Panar [bun-nah]: Look Out!</br>Known for his genre versatility and uncapped talent, Yikes (Maduwongga & Wongi) is a staple in the Boorloo community, and continues to lay the groundwork for himself and others locally. He has taught and developed up-and-coming First Nations Artists under his agency Nani and in collaboration with Netwerxx, and has recently performed for Boiler Room, Inner Varnika and Pitch Music & Arts Festival and supported the likes of KushJones, DJ N*gga Fox and Wax o’ Paradiso.",
                 image: joinArtistURL('v1687322477/soma/Yikes_oksuhd.png'),
                 sc: 1422003994})
-
-         
-/*artists.forEach(loadArtistDOM)*/
-
-
-//Mobile Nav Functionality
-var mobileNav = document.querySelector(".mobile-nav");
-var modalPopup =  document.querySelector(".modal-popup");
-var mobileNavItems = document.querySelectorAll(".mobile-nav__item a");
-var toggleButton = document.querySelector(".toggle-button");
-var toggled = false;
 
 //Artist Popup Functionality
 var artistMobile = document.querySelectorAll(".artist")[0];
@@ -332,7 +281,6 @@ function loadArtist(artist,currentArtist) {
   artist.querySelector('.artist__id').innerHTML = (currentArtist.id + 1) + "/21";
 }
 
-
 backButton = document.querySelectorAll(".artist__action-back");
 
 for (let i = 0; i < backButton.length; i++) {
@@ -356,6 +304,12 @@ for (let i = 0; i < nextButton.length; i++) {
   });
 }
 
+//Mobile Nav Functionality
+var mobileNav = document.querySelector(".mobile-nav");
+var modalPopup =  document.querySelector(".modal-popup");
+var mobileNavItems = document.querySelectorAll(".mobile-nav__item a");
+var toggleButton = document.querySelector(".toggle-button");
+var toggled = false;
 
 for (var i = 0; i < termLinks.length; i++) {
   termLinks[i].addEventListener("click", function() {
@@ -468,31 +422,27 @@ if (soundButton) {
 function toggleSound() {
   if (audioOn) {
     soundButton.src = "images/sound_off.svg"
-    document.getElementById("audio").pause();
+    audio.pause();
     audioCredit.style.opacity = 0;
   } else {
     audioCredit.style.opacity = 1;
     soundButton.src = "images/sound_on.svg"
-    document.getElementById("audio").play();
+    audio.play();
   }
   audioOn = !audioOn;
 }
 
 function closeModal() {
   if (modal) {
-
-
     modal.style.display = 'none';
     header.style.visibility ="visible";
     footer.style.visibility = "visible";
     for (var i = 0; i < sections.length; i++) {
       sections[i].style.visibility = "visible"
     }
-
     setTimeout(function () {
       document.querySelector(".scroll-prompt").style.opacity = 0;
     }, 8000);
-    
   }
 }
 
@@ -505,7 +455,7 @@ toggleButton.addEventListener("click", function() {
   if (!toggled) {
     toggleButton.classList.add('filter_white')
     mobileNav.classList.remove("visually-hidden");
-    artistMobile.classList.add('visually-hidden'); //   artist.style.display = 'none';
+    artistMobile.classList.add('visually-hidden');
     document.querySelector(".artist__action-exit").style.display = 'none';
     sectionTitle.style.opacity = 0;
     currentArtist = undefined;
@@ -516,10 +466,7 @@ toggleButton.addEventListener("click", function() {
   toggled = !toggled;
 });
 
-
 window.addEventListener('load', function() { 
   document.querySelector(".modal-acknowledgment__actions").classList.remove("loader");
   document.querySelector(".modal-acknowledgment__action").style.opacity = 1;
 });
-
-
