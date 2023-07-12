@@ -11,8 +11,10 @@ var audioOn = false;
 var scrollLinks = document.querySelectorAll(".scroll-link");
 var infoSections = document.querySelectorAll("#info h3");
 var termLinks = document.querySelectorAll('.terms-link');
+var volLink = document.querySelectorAll('.vol-link')
 var audioCredit = document.querySelector(".audio-credit");
 var audio = document.getElementById("audio");
+
 
 /* PAGE OBSERVERS */
   
@@ -67,7 +69,7 @@ createObserver(vids, vid_callback);
 /* ISCROLL SETUP */
 
 var myScroll;
-function loaded () {
+function loaded() {
     myScroll = new IScroll('#wrapper', {
       scrollX: true,
       scrollY: true,
@@ -248,7 +250,7 @@ function findArtistByName (name) {
     }
   }
 }
-
+currentArtist = findArtistByName('Acopia');
 function loadArtistElement(event) {
   if (event || currentArtist === undefined) {
     var text = "";
@@ -271,7 +273,6 @@ function loadArtistElement(event) {
 }
 
 function loadArtist(artist,currentArtist) {
-  document.querySelector('.artist__base_img').classList.add('visually-hidden');
   artist.classList.remove('visually-hidden'); //  artist.style.display = 'flex';
   artist.querySelector('.artist__img').src = currentArtist.image;
   artist.querySelector('.artist__name').innerHTML = currentArtist.name;
@@ -282,7 +283,7 @@ function loadArtist(artist,currentArtist) {
 }
 
 backButton = document.querySelectorAll(".artist__action-back");
-
+console.log(backButton);
 for (let i = 0; i < backButton.length; i++) {
   backButton[i].addEventListener("click", function() {
     prevArtistId = currentArtist.id - 1
@@ -314,9 +315,19 @@ var toggled = false;
 for (var i = 0; i < termLinks.length; i++) {
   termLinks[i].addEventListener("click", function() {
     myScroll.disable();
+    closeMobileNav();
     document.querySelector('.terms-popup').classList.remove("visually-hidden");
   });
 }
+
+for (var i = 0; i < volLink.length; i++) {
+  volLink[i].addEventListener("click", function() {
+    myScroll.disable();
+    document.querySelector('.vol-popup').classList.remove("visually-hidden");
+  });
+}
+
+
 
 document.querySelector('.artist__action-exit').addEventListener("click", function() {
   artistMobile.classList.add('visually-hidden'); //    artist.style.display = 'none';;
@@ -328,6 +339,11 @@ document.querySelector('.artist__action-exit').addEventListener("click", functio
 document.querySelector('.terms__action-exit').addEventListener("click", function() {
   myScroll.enable();
   document.querySelector('.terms-popup').classList.add("visually-hidden");
+});
+
+document.querySelector('.vol__action-exit').addEventListener("click", function() {
+  myScroll.enable();
+  document.querySelector('.vol-popup').classList.add("visually-hidden");
 });
 
 

@@ -10,42 +10,23 @@
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="scripts/iscroll-infinite.js"></script>
-
-    <!-- Firebase Integration -->
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-    
-      const firebaseConfig = {
-        apiKey: "AIzaSyAvjHxxFF9TyQBjJ5_6w-mks1eFn00R6uA",
-        authDomain: "soma-2023.firebaseapp.com",
-        projectId: "soma-2023",
-        storageBucket: "soma-2023.appspot.com",
-        messagingSenderId: "1088709556296",
-        appId: "1:1088709556296:web:02eda02909576de6ee007d",
-        measurementId: "G-B4FMXJEEG8"
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-        <script>
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '2149651875364267');
-          fbq('track', 'PageView');
-          </script>
-          <noscript><img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=2149651875364267&ev=PageView&noscript=1"
-          /></noscript>
-      <!-- End Meta Pixel Code -->
-    <script type="text/javascript" src="scripts/main.js" defer></script>
-
+    <script> // Google pixel code
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2149651875364267');
+      fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2149651875364267&ev=PageView&noscript=1"
+      /></noscript>
+  <script type="module" src="scripts/firebase.js" defer></script>
+  <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
 
 <body onload="loaded()">
@@ -84,6 +65,10 @@
                 <li class="main-nav__item">
                     <a href="#info" class="scroll-link">Info</a>
                 </li>
+                <!--
+                <li class="main-nav__item">
+                  <a href="#volunteer" class="scroll-link">Volunteer</a>
+                </li>-->
                 <li class="main-nav__item--cta">
                     <a href="https://events.humanitix.com/soma" target="_blank"><span>Tickets</span></a>
                 </li>
@@ -116,9 +101,16 @@
             <li class="mobile-nav__item">
                 <a href="#info" class="scroll-link">Info</a>
             </li>
+            <!--
+            <li class="mobile-nav__item">
+              <a href="#volunteer" class="scroll-link">Volunteer</a>
+            </li>-->
             <li class="mobile-nav__item">
                 <a href="#say-hi" class="scroll-link">Say hi</a>    
             </li>
+            <li class="mobile-nav__item">
+              <a class="terms-link main-footer__terms">T&C</a>    
+          </li>
         </ul>
         <div class="main-nav__contacts">
             <a href="https://instagram.com/soma__festival/" target="_blank">
@@ -158,7 +150,8 @@
                 <div class="all-artists">
                     <div class="img_container">
                         <img src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687405368/soma/01_No_Artist_okfb9u.png" alt="Artist Tile">
-                    </div>
+                        <div class="centered">Click for bio</div>
+                      </div>
                     <h1>Artists</h1>
                     <div class="artist-list">
                       <div class="artist-row">
@@ -196,21 +189,18 @@
                       </div>
                     </div>
                 </div>
-                <div class="artist__base_img img_container">
-                  <img class="artist__img" src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687405368/soma/01_No_Artist_okfb9u.png" alt="Artist Tile"></img>
-                </div>
-                <div class="artist visually-hidden">
+                <div class="artist">
                     <div class="img_container">
-                      <img class="artist__img" src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687405368/soma/01_No_Artist_okfb9u.png" alt="Artist Tile"></img>
+                      <img class="artist__img" src="https://res.cloudinary.com/dlvxse9ly/image/upload/c_fill,h_580,w_1080/v1687322243/soma/Acopia_02_lu1vbp.png" alt="Artist Tile"></img>
                     </div>
-                    <h2 class="artist__name"></h2>
+                    <h2 class="artist__name">Acopia</h2>
                     <div class="artist__info">
-                        <p class="artist__bio"></p>
-                        <iframe class="artist__sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"></iframe>
+                        <p class="artist__bio">Acopia invite listeners to open their hearts and sink into their feelings, into a hazy dreamworld of sultry vocals, pensive synthesis, & smouldering basslines. The Naarm/Melbourne-based trio of Kate Durman (Purient), Lachlan McGeehan (Liluzu) & Morgan Wright, have crafted a collection of slow-burn anthems that rest in a fever dream between trip-hop, dream pop & downtempo. Conjuring the bedroom intimacy of their records effortlessly live, they softly lull listeners to dive into the sentimentality of past memories while forming new ones, together.</p>
+                        <iframe class="artist__sc" width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1200653452&color=%23283a97&inverse=true&auto_play=false&show_user=true"></iframe>
                     </div>
                     <div class="artist__actions">
                         <button class="artist__action-back" type="button">&lt; PREV</button>
-                        <p class="artist__id"></p>
+                        <p class="artist__id">1/21</p>
                         <button class="artist__action-next" type="button">NEXT &gt;</button>
                     </div>
                 </div>
@@ -288,6 +278,34 @@
               <div class="visually-hidden">   
                 <p>We will have a range of volunteer roles available to apply for. More info and a registration form will be available via a dedicated page closer to the event.</p>
               </div>   
+            </section>
+            <section id="volunteer">
+              <video disableRemotePlayback playsinline muted class="feature-img">
+                <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687461688/soma/Icon_04_4444XQ-8Alpha_H.265_rt5gji.mp4" type="video/mp4;codecs=hvc1">
+                <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687461690/soma/Icon_04_4444XQ-8Alpha_VP9_hddc0d.webm" type="video/webm">
+              </video>
+              <h1>Volunteer</h1>
+              <div>
+                <p>Expressions of interest for volunteering at Soma 2023 are now open.</p>
+                </br>
+                <p>These positions are intended for those who may not have the means to purchase a ticket, so please keep this in consideration when submitting your application.</p>
+                </br>
+                <p>In exchange for a free ticket to the event, we ask for 8 hours of your time volunteering, which will be split into 2, 4-hour shifts. We have a range of volunteer roles available across the following areas:</p>
+                </br>
+                <ul>
+                  <li><u> Sustainability:</u> Anything to help keep our event clean, green and pristine. This may include waste collection & sorting, handing out rubbish bags and helping keep the site clean or supporting the cleaning team to keep toilets tidy.</li>
+                  <li><u> Welcome crew:</u> Making sure everyone has a warm welcome to the event. This may include greeting guests and checking tickets, traffic management or other tasks to ensure a smooth arrival process.</li>
+                  <li><u>  Safety & care team:</u> Making sure everyone feels safe and comfortable on-site, with all the info they need for a great time. This may include time at the info tent, roving the festival to check in on attendees and being on hand to direct people to the support they need should they need it.</li>
+                  <li><u>  Pack down crew:</u> Getting the site back to how we found it on Monday. This may include infrastructure pack down, clean-up and rubbish sorting. Note: this will be an 8-hour Monday shift.</li>
+                </ul>
+                </br>
+                <p>Expressions of interest will be open until Friday 28th July.</p>
+                <!--<p class="terms-link">View <a>volunteer terms and conditions</a></p>-->
+              </br>
+                <p class="vol-link">
+                  <a><span>Apply</span></a>
+                </p>
+            </div>
             </section>
             <section id="say-hi">
                 <p class="say-hi__intro">Soma acknowledges our event, and our work takes place on stolen land. We wish to acknowledge and pay respect to the Traditional Owners and Custodians of the land on which our event happens, the Ngarigo people, and the stories, art, traditions and living cultures of all Aboriginal and Torres Strait Islander peoples of this country - past, present and emerging. Sovereignty was never ceded.</p>
@@ -377,7 +395,88 @@
           <li>The Promoter may vary these Terms & Conditions at any time without notice to you. Any variations become effective immediately once the variation has been published on the Promoter’s website.</li>
         </ol>
     </div>
+    <div class="vol-popup visually-hidden">
+      <button class="vol__action-exit" type="button">X</button>
+      <h1>Volunteer Form </h1>
+      <form id="vol-form">
+        <p>*Mandatory fields</p>
+        <div class="vol-field__same-line">
+          <label for="first-name">First name*</label>
+          <input type="text" id="first-name" required>
+        </div>
+        <div class="vol-field__same-line">
+          <label for="last-name">Last name*</label>
+          <input type="text" id="last-name" required>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="preferred-name">What is your preferred name? </br><i>(leave blank if same as above)</i></label>
+          <input type="text" id="preferred-name">
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="pronoun">By which Pronouns would you like us to address you?</br><i>(leave blank if you prefer not to say)</i></label>
+          <input type="text" id="pronoun">
+        </div>
+        <div class="vol-field__same-line">
+          <label for="email">Email*</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="vol-field__same-line">
+          <label for="mobile">Mobile*</label>
+          <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="prev-vol"> Have you volunteered at a festival before? If so, please detail which event/s and your role/s.</label>
+          <textarea id="prev-vol"></textarea>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="why-vol">Why would you like to volunteer at Soma 2023?*</label>
+          <textarea id="why-vol" required></textarea>
+        </div>
 
+        <div class="vol-field__checkbox">
+          <p>Please tick if you have any of the following:</p>
+          <input type="checkbox" id="qual-white"><label for="qual-white">NSW White Card</label>
+          <input type="checkbox" id="qual-firstaid"><label for="qual-firstaid">First Aid Certificate</label>
+          <input type="checkbox" id="qual-mental"><label for="qual-mental">Mental Health First Aid Certificate (or similar qualification)</label>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="other-skills">Do you have any other relevant qualifications, transferable skills or ways in which you could contribute?
+          </br><i>Have a passion for perfect recycling? Experienced in customer service or looking after people? Tell us more!</i>
+            </label>
+          <textarea id="other-skills"></textarea>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="friend-act">Do you have friends you would like to volunteer with, or an act you don’t want to miss?
+          </br><i>We’ll do our absolute best to accommodate this if it’s possible.</i>
+            </label>
+          <input type="text" id="friend-act">
+        </div>
+        <div class="vol-field__checkbox">
+          <p>Would you prefer your shifts be scheduled on the same day, or across two days?
+          </br><i>Again, we’ll do our best to accommodate your preference.</i></p>
+          <input type="checkbox" id="seperate-days"><label for="seperate-days">Seperate Days</label>
+          <input type="checkbox" id="same-day"><label for="same-day">Same Day</label>
+        </div>
+        <div class="vol-field__checkbox">
+          <p>Are there any specific areas you would like to volunteer in?
+          </br><i>We'll do our best to accommodate your preference but allocation will be based on experience and best-fit for roles.</i>
+            </p>
+          <input type="checkbox" id="role-sustainability"><label for="role-sustainability"><u>Sustainability:</u> Anything to help keep our event clean, green and pristine. This may include waste collection & sorting, handing out rubbish bags and helping keep the site clean or supporting the cleaning team to keep toilets tidy.</label>
+          <input type="checkbox" id="role-welcome"><label for="role-welcome"><u>Welcome crew:</u> Making sure everyone has a warm welcome to the event. This may include greeting guests and checking tickets, traffic management or other tasks to ensure a smooth arrival process.</label>
+          <input type="checkbox" id="role-safety"><label for="role-safety"><u>Safety & care team:</u> Making sure everyone feels safe and comfortable on-site, with all the info they need for a great time. This may include time at the info tent, roving the festival to check in on attendees and being on hand to direct people to the support they need should they need it.</label>
+          <input type="checkbox" id="role-packdown"><label for="role-packdown"><u>Pack down crew:</u> Getting the site back to how we found it on Monday. This may include infrastructure pack down, clean-up and rubbish sorting. Note: this will be an 8-hour Monday shift.</label>
+        </div>
+        <div class="vol-field__diff-line">
+          <label for="vol-accessibility">We want to do our best to support you to have a great volunteering experience. Do you have any accessibility requirements or other requests you’d like to share?</label>
+          <input type="text" id="vol-accessibility">
+        </div>
+        </br>
+        <p>We’ll be in touch with all applicants to confirm the outcome of your application. </p>
+        </br>
+        <button type="submit" class="submit_vollie">Submit</button>
+      </form>
+      <p class="form-accepted visually-hidden">Thanks for registering interest in volunteering at Soma 2023! We will be in touch via email from Friday 4th August to let you know if you've recieved an offer.</p>
+    </div>
     <footer class="main-footer">
         <p class="terms-link main-footer__terms"><a>T&C</a></p>
         <p class="scroll-prompt">Scroll to explore</p>
@@ -393,7 +492,6 @@
           </a>
         </div>
     </footer>
-
 </body>
 
 </html>

@@ -226,6 +226,140 @@ a {
   color: #283A97;
 }
 
+#vol-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#vol-form label {
+  color: white;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.vol-field__same-line,
+.vol-field__diff-line {
+  display: flex;
+  padding: 0.6rem 0;
+}
+
+input {
+  max-width: 300px;
+}
+.vol-field__diff-line {
+  flex-direction: column;
+}
+
+.submit_vollie {
+    width:fit-content;
+    align-self: center;
+    font-family: "VeracruzSerial";
+    color: white;
+    background: transparent;
+    border: none;
+    transition: text-decoration 1s ease;
+    text-shadow:0rem 0rem 1rem white;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.submit_vollie:hover {
+  text-decoration: underline;
+}
+
+.submit_vollie::after {
+  content:'';
+  margin-top: -0.2rem;
+  display: block;
+  border-radius:40%;
+  height: 0.4rem;
+  filter:blur(0.2rem);
+  background: rgba(180, 188, 87, 1);
+}
+
+  /*    content:'';
+    margin-top: -0.4rem;
+    display: block;
+    border-radius:40%;
+    height: 0.4rem;
+    filter:blur(0.2rem);
+    background: rgba(180, 188, 87, 1);*/
+
+textarea {
+  background-color: transparent;
+  border: 1px solid white;
+  color:rgb(32, 60, 185);
+  resize: none;
+}
+
+.vol-field__checkbox {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  gap: 0.1rem;
+  padding: 0.6rem 0;
+}
+
+.vol-field__checkbox .vol-field__same-line {
+  grid-column: span 2;
+  padding-top: 0;
+}
+
+.vol-field__checkbox p {
+  grid-column: span 2;
+}
+
+.vol-field__checkbox label {
+  display:inline-block;
+}
+
+.vol-popup i {
+  font-size: 0.8rem;
+}
+
+input {
+  color: #283A97;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: transparent;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: white;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px dashed white;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  margin-top:4px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  box-shadow: inset 0.5rem 0.5rem #283A97;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#vol-form input:not([type="checkbox"]) {
+  background-color: transparent;
+  border: 1px solid white;
+  flex-grow: 1;
+}
+
 /* HEADER */
 .main-header {
     display: grid;
@@ -351,15 +485,22 @@ a {
 
   .main-nav__item--cta {
     border-radius: 17px;
-
     transition: 1s;
   }
 
-  .main-nav__item--cta span {
+  .main-nav__item--cta span,
+  .vol-link span {
     position: relative;
   }
 
-  .main-nav__item--cta span:before {
+  .vol-link {
+    font-size: 1.5rem;
+    text-align:center;
+
+  }
+
+  .main-nav__item--cta span:before,
+  .vol-link span:before {
     top: -0.2rem;
     left:-0.8rem;
     content: "";
@@ -374,6 +515,10 @@ a {
     -moz-filter   : blur(1.5px);
     -webkit-filter: blur(1.5px);
     -o-filter     : blur(1.5px);
+}
+
+.vol-link {
+  cursor:pointer;
 }
 
   .main-nav__contacts a {
@@ -550,7 +695,8 @@ a {
     cursor: pointer;
   }
 
-  .terms-popup {
+  .terms-popup,
+  .vol-popup {
     padding: 2rem;
     position: fixed;
     display: flex;
@@ -564,15 +710,18 @@ a {
     background: url(images/terms_background.jpg);
   }
 
-  .terms-popup {
+  .terms-popup,
+  .vol-popup {
     font-family: "GradientGothic", sans-serif;
   }
 
-  .terms-popup p, .terms-popup h3,.terms-popup li {
+  .terms-popup p, .terms-popup h3,.terms-popup li,
+  .vol-popup h3,.vol-popup li{
     margin-bottom: 1rem;
   }
 
-  .terms-popup ol {
+  .terms-popup ol,
+  .vol-popup ol {
     font-family: 'VeracruzSerial';
     font-size: 1rem;
     color: white;
@@ -605,10 +754,6 @@ a {
   #home h1 {
     display: block;
   }
-  
-  h1 {
-    display: block;
-  }
 
   .home_text {
     align-self: flex-end; /*flex-end used instead of end for correct iOS mobile rendering*/
@@ -638,8 +783,9 @@ a {
   }
 
 .img_container {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
   }
 
   #artists img {
@@ -677,6 +823,10 @@ a {
     padding-top: calc(2rem + 3*0.2rem + 3*0.7rem);
   }
 
+.artist:nth-child(2) {
+  display: none;
+}
+
   .artist-list sup, .artist-list span {
     font-size: 60%;
   }
@@ -712,7 +862,7 @@ a {
     padding-bottom:4rem;
   }
 
-  .artist__action-back, .artist__action-next, .artist__action-exit, .terms__action-exit {
+  .artist__action-back, .artist__action-next, .artist__action-exit, .terms__action-exit, .vol__action-exit {
     color: white;
     background: transparent;
     border: none;
@@ -733,7 +883,8 @@ a {
     max-width:400px;
   }
 
-  .terms__action-exit {
+  .terms__action-exit,
+  .vol__action-exit {
     align-self: flex-end;
     font-size: 2rem;
   } 
@@ -761,71 +912,95 @@ a {
     margin-bottom:1rem; 
   }
 
-  .artist__base_img {
-    padding-left: 3rem;
-    padding-top: 5rem;
-    align-self: start;
-    max-width: 600px;
-  }
-
-  .artist__base_img img {
-    max-width: 600px;
-  }
-
   .artist img {
     width: 100%;
   }
 
-  /* SECTION - INFO */
-
-  #info {
-    font-family: "GradientGothic", sans-serif;
-    left: calc(1.8*1920px);
-    top: calc(5.1*1080px);
-    height: auto;
+  .centered {
+    font-size: 1rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  #info p, #info ul {
+  /* SECTION - INFO */
+  /* SECTION - VOLUNTEER */
+
+  #info,
+  #volunteer {
+    font-family: "GradientGothic", sans-serif;
+    height: auto;
+  }
+  #info {
+    left: calc(1.8*1920px);
+    top: calc(5.1*1080px);
+
+  }
+
+  #volunteer {
+    left: calc(2.8*1920px);
+    top: calc(6.1*1080px);
+  }
+
+  #info p, #info ul,
+  #volunteer p, #volunteer ul {
     font-family: "GradientGothic", sans-serif;
     margin: 0 2rem;
   }
 
-  #info h3 {
+  #info h3,
+  #volunteer h3 {
     padding-bottom: 0.2rem;
   }
 
-  #info span {
+  #info span,
+  #volunteer span {
     text-shadow: 0rem 0rem 1rem white,
     0rem 0rem 1rem white;
   }
 
-  #info div {
+  #info div,
+  #volunteer div {
     margin-bottom: 23px;
   }
 
-  #info .feature-img {
+  #info .feature-img,
+  #volunteer .feature-img {
     margin-bottom:-1.5rem;
   }
 
-  #info ul {
+  #info ul,
+  #volunteer ul {
     display: flex;
     font-size: 1rem;
-    padding: 0;
+    padding: 20px;
     color: white;
     flex-direction: column;
     list-style: none;
   }
 
-  #info li:before {
+  #info li,
+  #volunteer li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 5px;
+    margin-bottom: 5px; 
+  }
+
+  #info li:before,
+  #volunteer li:before {
     content:"";
     height: 1rem;
     width: 1rem;
     background: rgba(180, 189, 88, 0.6);
     filter:blur(0.2rem);
     border-radius: 50%;
-    display: inline-block;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: -15px;
   }
-
 
   .salmon-underline::after {
     content:'';
@@ -845,12 +1020,6 @@ a {
     height: 0.4rem;
     filter:blur(0.2rem);
     background: rgba(180, 188, 87, 1);
-  }
-  /* SECTION - VOLUNTEER */
-
-  #volunteers {
-    left: calc(2.8*1920px);
-    top: calc(6.1*1080px);
   }
 
   /* SECTION - SUSTAINABILITY */
@@ -904,12 +1073,13 @@ a {
       justify-content: flex-end;
       padding-right: 1rem;
     }
-    p {
+    p, label {
       font-family: 'VeracruzSerial';
       font-size: 1rem;
     }
 
     h1 {
+      display: block;
       font-family: 'VeracruzSerial';
       font-size: 2.5rem;
     }
@@ -1009,6 +1179,10 @@ a {
       align-self:start;
     }
 
+    .artist:nth-child(2) {
+      display: flex;
+    }
+
     .artist__img {
       max-width: 600px;
     }
@@ -1059,7 +1233,7 @@ a {
       box-shadow: 0 2rem 0.6rem 0.2rem rgba(180, 189, 88, 0.8);
       text-shadow: none;
       border-radius: 1rem;
-    }  
+    }
 
     #artists {
       display: grid;
@@ -1077,7 +1251,7 @@ a {
       white-space: nowrap;
     }
 
-    .all-artists img {
+    .all-artists .img_container {
       display: none;
     }
 
@@ -1097,30 +1271,30 @@ a {
       font-family: 'VeracruzSerial';
     }
 
-    #sustainability, #volunteers, .modal-acknowledgment {
+    #sustainability, #volunteer, .modal-acknowledgment {
       padding-left:20vw;
       padding-right:20vw;
     }
 
-    #info p, #info ul {
+    #info p, #info ul,
+    #volunteer p, #volunteer ul  {
       font-family: "VeracruzSerial", sans-serif;
     }
 
-    #info {
+    #info,
+    #volunteer {
       padding-left: 500px;
       padding-top: 14rem;
     }
-  
-    #info .feature-img {
+
+    #info .feature-img,
+    #volunteer .feature-img {
       z-index:-1;
       position: absolute;
       max-width: 400px;
       top: 14rem;
       left: 50px;
     }
-
-
-
     #sustainability .feature-img {
       width: 60%;
       z-index:-1;
@@ -1161,6 +1335,18 @@ a {
     .say-hi__element p {
       font-size:0.8125rem;
     }
+    .terms-popup p, .terms-popup h3, .terms-popup ol,
+    .vol-popup p, .vol-popup h3, .vol-popup ol {
+      font-family: 'VeracruzSerial';
+    }
+
+    .vol-popup {
+      padding-left:30vw;
+      padding-right:30vw;
+    }
+    .vol-popup h1 {
+      text-align: center;
+    }
 
     .say-hi__bar {
       display: flex;
@@ -1169,10 +1355,6 @@ a {
       background-image: url(images/footer_bar.jpg);
       margin-bottom: 1rem;
       border-radius: 1rem;
-    }
-
-    .terms-popup p, .terms-popup h3, .terms-popup ol {
-      font-family: 'VeracruzSerial';
     }
   }
 
