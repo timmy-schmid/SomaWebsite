@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Soma Music & Arts Festival. 3 days & 3 nights of music with friends, nestled amongst the Snowy Mountains, Ngarigo Land NSW.">
     <title>Soma Music & Arts</title>
     <link rel="shortcut icon" href="favicon.png">
@@ -65,10 +65,9 @@
                 <li class="main-nav__item">
                     <a href="#info" class="scroll-link">Info</a>
                 </li>
-                <!--
                 <li class="main-nav__item">
                   <a href="#volunteer" class="scroll-link">Volunteer</a>
-                </li>-->
+                </li>
                 <li class="main-nav__item--cta">
                     <a href="https://events.humanitix.com/soma" target="_blank"><span>Tickets</span></a>
                 </li>
@@ -101,15 +100,14 @@
             <li class="mobile-nav__item">
                 <a href="#info" class="scroll-link">Info</a>
             </li>
-            <!--
             <li class="mobile-nav__item">
               <a href="#volunteer" class="scroll-link">Volunteer</a>
-            </li>-->
+            </li>
             <li class="mobile-nav__item">
                 <a href="#say-hi" class="scroll-link">Say hi</a>    
             </li>
             <li class="mobile-nav__item">
-              <a class="terms-link main-footer__terms">T&C</a>    
+              <a class="terms-link">T&C</a>    
           </li>
         </ul>
         <div class="main-nav__contacts">
@@ -135,8 +133,8 @@
                 </div>
                 <div class="vid_container">
                     <video disableRemotePlayback playsinline muted class="home-logo">
-                      <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687453895/soma/LOGO_WEB_2_H.265_wyfq9a.mp4" type="video/mp4;codecs=hvc1">
-                      <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687453894/soma/LOGO_WEB_2_VP9_kiukzd.webm" type="video/webm">
+                      <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1689240524/soma/LOGO_WEB_V2_H.265_kgmtas.mp4" type="video/mp4;codecs=hvc1">
+                      <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1689240500/soma/LOGO_WEB_V2_VP9_ralet9.webm" type="video/webm">
                     </video>
                 </div>
                 <div class="home_text">
@@ -274,21 +272,21 @@
                 </br>
                 <p>All cars entering the festival will require a car pass. These will be released via Humanitix closer to the event.</p>
               </div>
-              <h3 class="alternate">Volunteering <span>+</span></h3>
+              <!-- <h3 class="alternate">Volunteering <span>+</span></h3>
               <div class="visually-hidden">   
                 <p>We will have a range of volunteer roles available to apply for. More info and a registration form will be available via a dedicated page closer to the event.</p>
-              </div>   
+              </div>    -->
             </section>
             <section id="volunteer">
-              <video disableRemotePlayback playsinline muted class="feature-img">
-                <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687461688/soma/Icon_04_4444XQ-8Alpha_H.265_rt5gji.mp4" type="video/mp4;codecs=hvc1">
-                <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1687461690/soma/Icon_04_4444XQ-8Alpha_VP9_hddc0d.webm" type="video/webm">
-              </video>
+                <video disableRemotePlayback playsinline muted class="feature-img">
+                  <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1689240502/soma/Element_03_Mountain_Animated_H.265_fdoqs2.mp4" type="video/mp4;codecs=hvc1">
+                  <source src="https://res.cloudinary.com/dlvxse9ly/video/upload/v1689240488/soma/Element_03_Mountain_Animated_VP9_yz5sae.webm" type="video/webm">
+                </video>
               <h1>Volunteer</h1>
               <div>
                 <p>Expressions of interest for volunteering at Soma 2023 are now open.</p>
                 </br>
-                <p>These positions are intended for those who may not have the means to purchase a ticket, so please keep this in consideration when submitting your application.</p>
+                <p>These positions are intended for those who may not have the means to purchase a ticket or who wish to play a role in bringing the event to life, so please keep this in consideration when submitting your application.</p>
                 </br>
                 <p>In exchange for a free ticket to the event, we ask for 8 hours of your time volunteering, which will be split into 2, 4-hour shifts. We have a range of volunteer roles available across the following areas:</p>
                 </br>
@@ -396,8 +394,10 @@
         </ol>
     </div>
     <div class="vol-popup visually-hidden">
-      <button class="vol__action-exit" type="button">X</button>
-      <h1>Volunteer Form </h1>
+      <div class="vol-header">
+        <h1>Volunteer Application</h1>
+        <button class="vol__action-exit" type="button">X</button>
+      </div>
       <form id="vol-form">
         <p>*Mandatory fields</p>
         <div class="vol-field__same-line">
@@ -413,7 +413,7 @@
           <input type="text" id="preferred-name">
         </div>
         <div class="vol-field__diff-line">
-          <label for="pronoun">By which Pronouns would you like us to address you?</br><i>(leave blank if you prefer not to say)</i></label>
+          <label for="pronoun">What pronouns would you like us to use when addressing you?</br><i>(leave blank if you prefer not to say)</i></label>
           <input type="text" id="pronoun">
         </div>
         <div class="vol-field__same-line">
@@ -435,6 +435,7 @@
 
         <div class="vol-field__checkbox">
           <p>Please tick if you have any of the following:</p>
+          <input type="checkbox" id="qual-driver"><label for="qual-driver">Australian Driver's License</label>
           <input type="checkbox" id="qual-white"><label for="qual-white">NSW White Card</label>
           <input type="checkbox" id="qual-firstaid"><label for="qual-firstaid">First Aid Certificate</label>
           <input type="checkbox" id="qual-mental"><label for="qual-mental">Mental Health First Aid Certificate (or similar qualification)</label>
@@ -447,15 +448,15 @@
         </div>
         <div class="vol-field__diff-line">
           <label for="friend-act">Do you have friends you would like to volunteer with, or an act you don’t want to miss?
-          </br><i>We’ll do our absolute best to accommodate this if it’s possible.</i>
+          </br><i>We’ll do our absolute best to accommodate if possible.</i>
             </label>
-          <input type="text" id="friend-act">
+          <input type="text" id="friend-act"> 
         </div>
         <div class="vol-field__checkbox">
           <p>Would you prefer your shifts be scheduled on the same day, or across two days?
           </br><i>Again, we’ll do our best to accommodate your preference.</i></p>
-          <input type="checkbox" id="seperate-days"><label for="seperate-days">Seperate Days</label>
-          <input type="checkbox" id="same-day"><label for="same-day">Same Day</label>
+          <input type="checkbox" id="seperate-days"><label for="seperate-days">Seperate days</label>
+          <input type="checkbox" id="same-day"><label for="same-day">Same day</label>
         </div>
         <div class="vol-field__checkbox">
           <p>Are there any specific areas you would like to volunteer in?
@@ -467,8 +468,8 @@
           <input type="checkbox" id="role-packdown"><label for="role-packdown"><u>Pack down crew:</u> Getting the site back to how we found it on Monday. This may include infrastructure pack down, clean-up and rubbish sorting. Note: this will be an 8-hour Monday shift.</label>
         </div>
         <div class="vol-field__diff-line">
-          <label for="vol-accessibility">We want to do our best to support you to have a great volunteering experience. Do you have any accessibility requirements or other requests you’d like to share?</label>
-          <input type="text" id="vol-accessibility">
+          <label for="vol-accessibility">We want to do our best to support you to have a great volunteering experience. Do you have any accessibility requirements you’d like to share?</label>
+          <textarea id="vol-accessibility"></textarea>
         </div>
         </br>
         <p>We’ll be in touch with all applicants to confirm the outcome of your application. </p>
@@ -480,7 +481,7 @@
     <footer class="main-footer">
         <p class="terms-link main-footer__terms"><a>T&C</a></p>
         <p class="scroll-prompt">Scroll to explore</p>
-        <div>
+        <div class="main-footer__contacts">
           <a href="https://instagram.com/soma__festival/" target="_blank" class="main-footer__contact">
               <img src="images/IG.svg" alt="Soma Instagram">
           </a>

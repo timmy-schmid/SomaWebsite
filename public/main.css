@@ -243,9 +243,6 @@ a {
   padding: 0.6rem 0;
 }
 
-input {
-  max-width: 300px;
-}
 .vol-field__diff-line {
   flex-direction: column;
 }
@@ -290,7 +287,8 @@ textarea {
   background-color: transparent;
   border: 1px solid white;
   color:rgb(32, 60, 185);
-  resize: none;
+  height: 5rem;
+  resize: vertical;
 }
 
 .vol-field__checkbox {
@@ -661,17 +659,27 @@ input[type="checkbox"]:checked::before {
     left: 0;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 2rem;
     padding-top: 0;
   }
 
   .main-footer__terms {
+    position: absolute;
+    left:0;
     font-size: 1.25rem;
     transition: 1s;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
   }
 
   .main-footer__terms:hover {
     transform: scale(1.2);
+  }
+
+  .main-footer__contacts {
+    position: absolute;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    right:0;
   }
 
   .main-footer__contact img {
@@ -682,9 +690,13 @@ input[type="checkbox"]:checked::before {
   }
 
   .scroll-prompt {
+    position: absolute;
     font-size: 1.5rem;
+    left: 50%;
+    transform: translate(-50%);
     opacity: 1;
     transition: opacity 0.5s;
+    padding-bottom: 1rem;
   }
 
   .main-footer__contact img:hover {
@@ -753,6 +765,17 @@ input[type="checkbox"]:checked::before {
 
   #home h1 {
     display: block;
+  }
+
+  .vol-header {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:1rem;
+  }
+
+  .vol-header h1 {
+    display: block;
+    text-align:left;
   }
 
   .home_text {
@@ -862,13 +885,23 @@ input[type="checkbox"]:checked::before {
     padding-bottom:4rem;
   }
 
-  .artist__action-back, .artist__action-next, .artist__action-exit, .terms__action-exit, .vol__action-exit {
+  .artist__action-back, .artist__action-next, .artist__action-exit, .terms__action-exit {
     color: white;
     background: transparent;
     border: none;
     text-decoration: none;
     padding: 0.5rem 1rem;
     font: inherit;
+    cursor: pointer;
+  }
+
+  .vol__action-exit {
+    color: white;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font: inherit;
+    font-size:1.625rem;
     cursor: pointer;
   }
 
@@ -883,8 +916,7 @@ input[type="checkbox"]:checked::before {
     max-width:400px;
   }
 
-  .terms__action-exit,
-  .vol__action-exit {
+  .terms__action-exit {
     align-self: flex-end;
     font-size: 2rem;
   } 
@@ -1082,6 +1114,11 @@ input[type="checkbox"]:checked::before {
       display: block;
       font-family: 'VeracruzSerial';
       font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .vol__action-exit {
+      font-size:2.5rem;
     }
 
     h2 {
@@ -1271,7 +1308,7 @@ input[type="checkbox"]:checked::before {
       font-family: 'VeracruzSerial';
     }
 
-    #sustainability, #volunteer, .modal-acknowledgment {
+    #sustainability, .modal-acknowledgment {
       padding-left:20vw;
       padding-right:20vw;
     }
@@ -1293,8 +1330,9 @@ input[type="checkbox"]:checked::before {
       position: absolute;
       max-width: 400px;
       top: 14rem;
-      left: 50px;
+      left: 100px;
     }
+    
     #sustainability .feature-img {
       width: 60%;
       z-index:-1;
@@ -1404,6 +1442,9 @@ input[type="checkbox"]:checked::before {
 
     .artist__actions {
       padding-bottom:1.5rem;
+    }
+    .submit_vollie {
+      padding-bottom:8rem;
     }
 
   }

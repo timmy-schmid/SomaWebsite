@@ -34,6 +34,7 @@ function submitForm(e) {
     mobile:getInputVal('mobile'),
     prevVol:getInputVal('prev-vol'),
     whyVol:getInputVal('why-vol'),
+    qualDriver:getInputVal('qual-driver'),
     qualWhite:getInputVal('qual-white'),
     qualFirstAid:getInputVal('qual-firstaid'),
     qualMentalHealth:getInputVal('qual-mental'),

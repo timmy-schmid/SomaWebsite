@@ -458,7 +458,12 @@ function closeModal() {
     }
     setTimeout(function () {
       document.querySelector(".scroll-prompt").style.opacity = 0;
+      setTimeout(function () {
+        document.querySelector(".scroll-prompt").style.display = 'none';
+      }, 2000);
     }, 8000);
+
+
   }
 }
 
