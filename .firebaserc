@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "soma-2023"
-  }
+    "default": "soma-2023",
+    "dev": "soma2024-dev"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
