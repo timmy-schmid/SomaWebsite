@@ -6,9 +6,13 @@
 #B4BD58 yellow
 #C58B68 salmon
 */
-@font-face {
+/* @font-face {
   font-family: "GradientGothic";
   src: url("fonts/GradientGothicPremium-Thin.woff2") format("woff2");
+} */
+@font-face {
+  font-family: "GradientGothic";
+  src: url("fonts/GradientGothicPremium-Light.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,15 +35,15 @@
 }
 
 * {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-  }
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; 
+  text-rendering: optimizeLegibility;
   font-family: "GradientGothic", sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
@@ -56,100 +60,118 @@ section {
   width: 100vw;
 
   /* take into consideration Nav height and subtract from viewport */
-  height: calc(100vh - (1rem + 3*0.2rem + 3*0.7rem));
-  padding-top: calc(1rem + 3*0.2rem + 3*0.7rem);
+  height: calc(100vh - (1rem + 3 * 0.2rem + 3 * 0.7rem));
+  padding-top: calc(1rem + 3 * 0.2rem + 3 * 0.7rem);
 }
 
 p {
   font-family: "GradientGothic", sans-serif;
   font-size: 1rem;
   margin: 0;
-  color: white;
+  color: #2d2323;
 }
 
-h1 { /*home title*/
+h1 {
+  /*home title*/
   display: none;
   text-align: right;
   font-family: "VeracruzSerial", sans-serif;
   font-weight: normal;
-  margin:0;
-  font-size:1.625rem;
-  color: white;
+  margin: 0;
+  font-size: 1.625rem;
+  color: #2d2323;
 }
 
-h2 { /* artist headings */
+h2 {
+  /* artist headings */
   text-align: center;
   /*width: fit-content;*/
   cursor: pointer;
   font-family: "GradientGothic", sans-serif;
   font-weight: normal;
-  margin:0;
-  font-size:1.75rem;
+  margin: 0;
+  font-size: 1.75rem;
   padding: 0.2rem;
-  color: white;
+  color: #2d2323;
 }
 
-h3 { /* Info, Sustainability Volunteer headings */
+h3 {
+  /* Info, Sustainability Volunteer headings */
   text-align: center;
   /*width: fit-content;*/
   cursor: pointer;
   font-family: "GradientGothic", sans-serif;
   font-weight: normal;
-  margin:0;
-  font-size:1.25rem;
-  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2d2323;
 }
 
-h4 { /* say-hi heading */
+h4 {
+  /* say-hi heading */
   font-family: "GradientGothic", sans-serif;
   font-weight: normal;
-  margin:0;
-  font-size:1.125rem;
-  color: white;
+  margin: 0;
+  font-size: 1.125rem;
+  color: #2d2323;
 }
 
 a {
   text-decoration: none;
   transition: 1s;
-  display:inline-block;
+  display: inline-block;
   height: 0.1rem;
-  color: white;
-  box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104,0);
-  text-shadow: 0rem 0rem 1rem white,
-               0rem 0rem 1rem white;
+  color: #2d2323;
+  box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104, 0);
+  text-shadow: 0rem 0rem 1rem white, 0rem 0rem 1rem white;
 }
 
 .loader {
   margin-top: 2rem;
   border: 0.5rem solid #f3f3f3;
   border-radius: 50%;
-  border-top: 0.5rem solid #A5CEB6;
+  border-top: 0.5rem solid #a5ceb6;
   width: 4rem;
   height: 4rem;
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 1s linear infinite;
 }
+#animations .up-down-animation {
+  animation-name: up-down;
+  animation-duration: 2.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* SCROLLING */
 #wrapper {
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .fade-in {
@@ -160,21 +182,20 @@ a {
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-  
-#scroller {
 
-	position: absolute;
-	z-index: -1;
-	width: 12000px;
-	height: 9000px;
-	overflow: hidden;
-  background: url(images/background.jpg) no-repeat;
+#scroller {
+  position: absolute;
+  z-index: -1;
+  width: 12000px;
+  height: 9000px;
+  overflow: hidden;
+  background: url(images/background.jpg) no-repeat; /* 30% compression */
   background-size: 12000px 9000px;
   /*opacity:0;*/
 }
@@ -182,48 +203,53 @@ a {
 /* ACKNOWLEDGMENT TO COUNTRY */
 
 .modal-acknowledgment {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(0deg, rgba(32, 60, 185,0.6), rgba(32, 60, 185,0.6)),url(images/terms_background.jpg);
-    padding: 1rem;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(32, 60, 185, 0.6),
+      rgba(32, 60, 185, 0.6)
+    ),
+    url(images/terms_background.jpg);
+  padding: 1rem;
+}
 
 .modal-acknowledgment__text {
-    font-family: "VeracruzSerial";
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    color: white;
+  font-family: "VeracruzSerial";
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: white;
 }
 
 .modal-acknowledgment__actions {
-    text-align: center;
+  text-align: center;
 }
 
 .modal-acknowledgment__action {
-    opacity: 0;
-    transition: opacity 2s;
-    font-family: "VeracruzSerial";
-    color: white;
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    text-shadow:0rem 0rem 1rem white;
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
+  opacity: 0;
+  transition: opacity 2s;
+  font-family: "VeracruzSerial";
+  color: #2d2323;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  text-shadow: 0rem 0rem 1rem white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
 
 .modal-acknowledgment__action:hover,
 .modal-acknowledgment__action:active {
-  color: #283A97;
+  color: #283a97;
 }
 
 #vol-form {
@@ -248,17 +274,17 @@ a {
 }
 
 .submit_vollie {
-    width:fit-content;
-    align-self: center;
-    font-family: "VeracruzSerial";
-    color: white;
-    background: transparent;
-    border: none;
-    transition: text-decoration 1s ease;
-    text-shadow:0rem 0rem 1rem white;
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    cursor: pointer;
+  width: fit-content;
+  align-self: center;
+  font-family: "VeracruzSerial";
+  color: white;
+  background: transparent;
+  border: none;
+  transition: text-decoration 1s ease;
+  text-shadow: 0rem 0rem 1rem white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .submit_vollie:hover {
@@ -266,16 +292,16 @@ a {
 }
 
 .submit_vollie::after {
-  content:'';
+  content: "";
   margin-top: -0.2rem;
   display: block;
-  border-radius:40%;
+  border-radius: 40%;
   height: 0.4rem;
-  filter:blur(0.2rem);
+  filter: blur(0.2rem);
   background: rgba(180, 188, 87, 1);
 }
 
-  /*    content:'';
+/*    content:'';
     margin-top: -0.4rem;
     display: block;
     border-radius:40%;
@@ -286,7 +312,7 @@ a {
 textarea {
   background-color: transparent;
   border: 1px solid white;
-  color:rgb(32, 60, 185);
+  color: rgb(32, 60, 185);
   height: 5rem;
   resize: vertical;
 }
@@ -308,7 +334,7 @@ textarea {
 }
 
 .vol-field__checkbox label {
-  display:inline-block;
+  display: inline-block;
 }
 
 .vol-popup i {
@@ -316,7 +342,7 @@ textarea {
 }
 
 input {
-  color: #283A97;
+  color: #283a97;
 }
 
 input[type="checkbox"] {
@@ -335,7 +361,7 @@ input[type="checkbox"] {
   border-radius: 0.15em;
   display: grid;
   place-content: center;
-  margin-top:4px;
+  margin-top: 4px;
 }
 
 input[type="checkbox"]::before {
@@ -345,7 +371,7 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  box-shadow: inset 0.5rem 0.5rem #283A97;
+  box-shadow: inset 0.5rem 0.5rem #283a97;
 }
 
 input[type="checkbox"]:checked::before {
@@ -360,1091 +386,1115 @@ input[type="checkbox"]:checked::before {
 
 /* HEADER */
 .main-header {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "toggle-music-mobile mobile-nav__brand toggle-button"
-      ". section_title section_title"
-      ". . artist__action-exit";
-    width: 100vw;
-    position:fixed;
-    visibility: hidden;
-    top: 0;
-    left: 0;
-    padding: 1rem 1rem;
-    z-index:1;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "toggle-music-mobile mobile-nav__brand toggle-button"
+    ". section_title section_title"
+    ". . artist__action-exit";
+  width: 100vw;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 1rem 1rem;
+  z-index: 1;
 
-    /* background overflow trick */
-    background: url(images/clouds.png);
-    background-repeat: no-repeat;
-    background-size: 1000px;
-    padding-bottom: 60px;
-    margin-bottom: -60px;
-  }
+  /* background overflow trick */
+  background: url(images/clouds.png);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  padding-bottom: 60px;
+  margin-bottom: -60px;
+}
 
-  .toggle-music-mobile {
-    transition: 1s;
-    grid-area: toggle-music-mobile;
-    justify-self: start;
-  }
+.toggle-music-mobile {
+  transition: 1s;
+  grid-area: toggle-music-mobile;
+  justify-self: start;
+}
 
-  .toggle-music-mobile:hover {
-    transform:scale(1.2);
-  }
+.toggle-music-mobile:hover {
+  transform: scale(1.2);
+}
 
-  .toggle-button {
-    grid-area: toggle-button;
-    justify-self: end;
-  }
+.toggle-button {
+  grid-area: toggle-button;
+  justify-self: end;
+}
 
-  .toggle-button,
-  .toggle-music-mobile {
-    background:transparent;
-    border: none;
-    padding: 0;
-  }
+.toggle-button,
+.toggle-music-mobile {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
 
-  .toggle-button img,
-  .toggle-music-mobile img {
-    height: 2rem;
-  }
+.toggle-button img,
+.toggle-music-mobile img {
+  height: 2rem;
+}
 
-  .toggle-music {
-    font-family: "VeracruzSerial";
-    background: transparent;
-    color: white;
-    border: none;
-    text-decoration: none;
-    font-size: inherit;
-    transition: 1s;
-    cursor: pointer;
-  }
+.toggle-music {
+  font-family: "VeracruzSerial";
+  background: transparent;
+  color: #2d2323;
+  border: none;
+  text-decoration: none;
+  font-size: inherit;
+  transition: 1s;
+  cursor: pointer;
+}
 
-  .filter_white {
-    transition: 0.5s;
-  
-    filter: brightness(0) invert(1); /*drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));*/
-  }
+.filter_white {
+  transition: 0.5s;
+
+  filter: brightness(0) invert(1); /*drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));*/
+}
 
 /* HEADER - MAIN NAV */
-  .main-nav {
-    display: none;
-    flex-basis: 70%;
-  }
+.main-nav {
+  display: none;
+  flex-basis: 70%;
+}
 
-  .main-nav__brand {
-    grid-area: main-header__brand;
-    justify-self: center;
-  }
+.main-nav__brand {
+  grid-area: main-header__brand;
+  justify-self: center;
+}
 
-  .main-nav__brand img {
-    height: 2rem;
-  }
+.main-nav__brand img {
+  height: 2rem;
+}
 
-  .main-nav__items {
-    flex: 1 1 0;
-    font-family: "VeracruzSerial";
-    font-size: 1.125rem;
-    color: white;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    align-items:center;
-  }
+.main-nav__items {
+  flex: 1 1 0;
+  font-family: "VeracruzSerial";
+  font-size: 1.125rem;
+  color: #2d2323;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
 
-  .main-nav__item,
-  .main-nav__item--cta {
-    flex: 1 1 auto;
-    text-align: center;
-  }
+.main-nav__item,
+.main-nav__item--cta {
+  flex: 1 1 auto;
+  text-align: center;
+}
 
-  /* SECTION GENERAL */
-  .section_title {
-    grid-area: section_title;
-    font-family:"VeracruzSerial";
-    justify-self: end;
-    font-size: 1.125rem;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
+/* SECTION GENERAL */
+.section_title {
+  grid-area: section_title;
+  font-family: "VeracruzSerial";
+  justify-self: end;
+  font-size: 1.125rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
-  .main-nav__item a,
-  .toggle-music span {
-    text-decoration: none;
-    transition: 1s;
-    display:inline-block;
-    height: 0.1rem;
-    color: white;
-    box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104,0);
-    text-shadow: 0rem 0rem 1rem white,
-                 0rem 0rem 1rem white;
-  }
+.main-nav__item a,
+.toggle-music span {
+  text-decoration: none;
+  transition: 1s;
+  display: inline-block;
+  height: 0.1rem;
+  color: #2d2323;
+  box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104, 0);
+  text-shadow: 0rem 0rem 1rem white, 0rem 0rem 1rem white;
+}
 
-  .main-nav__item--cta {
-    border-radius: 17px;
-    transition: 1s;
-  }
+.main-nav__item--cta {
+  border-radius: 17px;
+  transition: 1s;
+}
 
-  .main-nav__item--cta span,
-  .vol-link span {
-    position: relative;
-  }
+.main-nav__item--cta a {
+  color: #c5afa0;
+}
 
-  .vol-link {
-    font-size: 1.5rem;
-    text-align:center;
-
-  }
-
-  .main-nav__item--cta span:before,
-  .vol-link span:before {
-    top: -0.2rem;
-    left:-0.8rem;
-    content: "";
-    position: absolute;
-    width : 100%;
-    height: 110%;
-    padding: 0.2rem 0.8rem;
-    background: #283A97;
-    border-radius: 17px;
-    z-index: -1;
-    filter        : blur(1.5px);
-    -moz-filter   : blur(1.5px);
-    -webkit-filter: blur(1.5px);
-    -o-filter     : blur(1.5px);
+.main-nav__item--cta span,
+.vol-link span {
+  position: relative;
 }
 
 .vol-link {
-  cursor:pointer;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-  .main-nav__contacts a {
-    text-decoration: none;
-  }
-  .main-nav__contacts img {
-    padding: 0rem 0.6rem;
-    height: 1.4rem;
-    filter: drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));
-    transition: 1s;
-  }
+.main-nav__item--cta span:before,
+.vol-link span:before {
+  top: -0.2rem;
+  left: -0.8rem;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  padding: 0.2rem 0.8rem;
+  background: #283a97;
+  border-radius: 17px;
+  z-index: -1;
+  filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -webkit-filter: blur(1.5px);
+  -o-filter: blur(1.5px);
+}
 
-  .main-nav__item:hover a,
-  .toggle-music:hover span {
-    transform: scale(1.2);
-    box-shadow: 0 1.8rem 0.5rem 0.2rem rgba(197, 140, 104,1);
-    border-radius: 1rem;
-  }
+.vol-link {
+  cursor: pointer;
+}
 
-  .main-nav__item--cta:hover {
-    transform: scale(1.2);  
-  }
+.main-nav__contacts a {
+  text-decoration: none;
+}
+.main-nav__contacts img {
+  padding: 0rem 0.6rem;
+  height: 1.4rem;
+  filter: drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));
+  transition: 1s;
+}
 
-  @keyframes animate_background_in {
-    from {
-      background-position: 80% 100%;
-      opacity: 0;
-    }
-    to {
-      background-position: 100% 80%;
-      opacity: 1;
-    }
-  }
-  @keyframes animate_background_out {
-    from {
-      background-position: 100% 80%;
-      opacity: 1;
-    }
-    to {
-      background-position: 80% 100%;
-      opacity: 0%;
-    }
-  }
+.main-nav__item:hover a,
+.toggle-music:hover span {
+  transform: scale(1.2);
+  box-shadow: 0 1.8rem 0.5rem 0.2rem rgb(160, 159, 83, 1);
+  border-radius: 1rem;
+}
 
-  .modal-popup {
-    position: fixed;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: 1s;
-    background: url(images/mobile_nav_background.jpg);
-    animation: animate_background_in 0.2s ease-out 1 forwards;
-  }
+.main-nav__item--cta:hover {
+  transform: scale(1.2);
+}
 
-  /* HEADER - MOBILE NAV */
-
-  .mobile-nav {
-    display: flex;
-    position: fixed;
-    z-index: 101;
-    top: calc(1rem + 3*0.2rem + 3*0.7rem); /*hacky solution. Change this when img asset comes in*/
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .mobile-nav__brand {
-    grid-area: mobile-nav__brand;
-    justify-self: center;
-  }
-
-  .mobile-nav__brand img {
-    height: 2rem;
+@keyframes animate_background_in {
+  from {
+    background-position: 80% 100%;
     opacity: 0;
-    transition: opacity 0.5s;
   }
-
-  .mobile-nav__items {
-    display: flex;
-    font-family: "VeracruzSerial";
-    font-size: 1.25rem;
-    padding:0;
-    color: white;
-    flex-direction: column;
-    list-style: none;
-    align-items: flex-end;
-  }
-
-  .mobile-nav__item,
-  .mobile-nav__item--cta {
-    padding: 1rem;
-    line-height: 0.2rem;
-  }
-
-  .mobile-nav__item--cta {
-    width: min-content;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    background: #283A97;
-  }
-
-  .mobile-nav__item a,
-  .mobile-nav__item--cta a{
-    text-decoration: none;
-    text-shadow: 0rem 0rem 1rem white,
-    0rem 0rem 1rem white;
-    color: white;
-  }
-
-  .audio-credit {
-    display: flex;
-    z-index: 90;
-    margin-top: calc(1rem + 3*0.2rem + 3*0.7rem);
-    left: 0;
-    top: 0;
-    position: fixed;
-    min-width: 100%;
-    justify-content: flex-start;
-    height: auto;
-    padding-left: 1rem;
-    transition: opacity 0.5s;
-    opacity:0;
-  }
-
-  .audio-credit p {
-    font-size: 1.125rem;;
-  }
-
-  /* FOOTER */
-  .main-footer {
-    width: 100vw;
-    position: fixed;
-    display: none;
-    visibility: hidden;
-    bottom: 0;
-    left: 0;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-top: 0;
-  }
-
-  .main-footer__terms {
-    position: absolute;
-    left:0;
-    font-size: 1.25rem;
-    transition: 1s;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .main-footer__terms:hover {
-    transform: scale(1.2);
-  }
-
-  .main-footer__contacts {
-    position: absolute;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    right:0;
-  }
-
-  .main-footer__contact img {
-    padding: 0rem 0.5rem;
-    height: 1.25rem;
-    filter: drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));
-    transition: 1s;
-  }
-
-  .scroll-prompt {
-    position: absolute;
-    font-size: 1.5rem;
-    left: 50%;
-    transform: translate(-50%);
+  to {
+    background-position: 100% 80%;
     opacity: 1;
-    transition: opacity 0.5s;
-    padding-bottom: 1rem;
   }
-
-  .main-footer__contact img:hover {
-    transform: scale(1.2);
+}
+@keyframes animate_background_out {
+  from {
+    background-position: 100% 80%;
+    opacity: 1;
   }
-
-  .terms-link {
-    cursor: pointer;
+  to {
+    background-position: 80% 100%;
+    opacity: 0%;
   }
+}
 
-  .terms-popup,
-  .vol-popup {
-    padding: 2rem;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    z-index: 91;
-    top: 0;
-    left: 0;
-    overflow: scroll;
-    background: url(images/terms_background.jpg);
-  }
+.modal-popup {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+  background: url(images/mobile_nav_background.jpg);
+  animation: animate_background_in 0.2s ease-out 1 forwards;
+}
 
-  .terms-popup,
-  .vol-popup {
-    font-family: "GradientGothic", sans-serif;
-  }
+/* HEADER - MOBILE NAV */
 
-  .terms-popup p, .terms-popup h3,.terms-popup li,
-  .vol-popup h3,.vol-popup li{
-    margin-bottom: 1rem;
-  }
+.mobile-nav {
+  display: flex;
+  position: fixed;
+  z-index: 101;
+  top: calc(
+    1rem + 3 * 0.2rem + 3 * 0.7rem
+  ); /*hacky solution. Change this when img asset comes in*/
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
-  .terms-popup ol,
-  .vol-popup ol {
-    font-family: 'VeracruzSerial';
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 1rem;
-    padding-left: 1em;
-  }
+.mobile-nav__brand {
+  grid-area: mobile-nav__brand;
+  justify-self: center;
+}
 
-  .terms-heading {
-    margin-left: -1em;
-  }
+.mobile-nav__brand img {
+  height: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
-  .feature-img {
-    width: 100%;
-    height: auto;
-    max-width: 700px;
-  }
+.mobile-nav__items {
+  display: flex;
+  font-family: "VeracruzSerial";
+  font-size: 1.25rem;
+  padding: 0;
+  color: #2d2323;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-end;
+}
 
-  .vid_container {
-    display:flex;
-    justify-content: center;
-  }
+.mobile-nav__item,
+.mobile-nav__item--cta {
+  padding: 1rem;
+  line-height: 0.2rem;
+}
 
-  /* SECTION - HOME PAGE */
+.mobile-nav__item--cta {
+  width: min-content;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background: #283a97;
+}
 
-  #home {
-    left: calc(3*1920px);
-    top: calc(2.1*1080px);
-  }
+.mobile-nav__item a,
+.mobile-nav__item--cta a {
+  text-decoration: none;
+  text-shadow: 0rem 0rem 1rem white, 0rem 0rem 1rem white;
+  color: #2d2323;
+}
 
-  #home h1 {
-    display: block;
-  }
+.audio-credit {
+  display: flex;
+  z-index: 90;
+  margin-top: calc(1rem + 3 * 0.2rem + 3 * 0.7rem);
+  left: 0;
+  top: 0;
+  position: fixed;
+  min-width: 100%;
+  justify-content: flex-start;
+  height: auto;
+  padding-left: 1rem;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
 
-  .vol-header {
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:1rem;
-  }
+.audio-credit p {
+  font-size: 1.125rem;
+}
 
-  .vol-header h1 {
-    display: block;
-    text-align:left;
-  }
+/* FOOTER */
+.main-footer {
+  width: 100vw;
+  position: fixed;
+  display: none;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 0;
+}
 
-  .home_text {
-    align-self: flex-end; /*flex-end used instead of end for correct iOS mobile rendering*/
-    text-align: right;
-    padding-right:1.1rem;
-  }
+.main-footer__terms {
+  position: absolute;
+  left: 0;
+  font-size: 1.25rem;
+  transition: 1s;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
 
-  .home_text p {
-    font-family: "VeracruzSerial", sans-serif;
-    font-size: 0.9375rem;
-  }
+.main-footer__terms:hover {
+  transform: scale(1.2);
+}
 
-  .home-logo {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    padding: 0 1rem;
-    padding-bottom: 1rem;
-  }
+.main-footer__contacts {
+  position: absolute;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  right: 0;
+}
 
-  /* SECTION - ARTISTS */
+.main-footer__contact img {
+  padding: 0rem 0.5rem;
+  height: 1.25rem;
+  filter: brightness(0%) saturate(100%) invert(9%) sepia(10%) saturate(1289%)
+    hue-rotate(314deg) brightness(97%) contrast(86%)
+    drop-shadow(0rem 0rem 0.6rem rgb(255, 255, 255));
+  transition: 1s;
+}
 
-  #artists {
-    left: calc(3.1*1920px);
-    top: calc(3.5*1080px);
-    height: auto;
-  }
+.scroll-prompt {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 1;
+  transition: opacity 0.5s;
+  padding-bottom: 1rem;
+}
+
+.main-footer__contact img:hover {
+  transform: scale(1.2);
+}
+
+.terms-link {
+  cursor: pointer;
+}
+
+.terms-popup,
+.vol-popup {
+  padding: 2rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  z-index: 91;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  background: url(images/terms_background.jpg);
+}
+
+.terms-popup,
+.vol-popup {
+  font-family: "GradientGothic", sans-serif;
+}
+
+.terms-popup p,
+.terms-popup h3,
+.terms-popup li,
+.vol-popup h3,
+.vol-popup li {
+  margin-bottom: 1rem;
+}
+
+.terms-popup ol,
+.vol-popup ol {
+  font-family: "VeracruzSerial";
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  padding-left: 1em;
+}
+
+.terms-heading {
+  margin-left: -1em;
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+}
+
+.vid_container {
+  display: flex;
+  justify-content: center;
+}
+
+/* SECTION - HOME PAGE */
+
+#home {
+  left: calc(3 * 1920px);
+  top: calc(2.1 * 1080px);
+}
+
+#home h1 {
+  display: block;
+}
+
+.vol-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.vol-header h1 {
+  display: block;
+  text-align: left;
+}
+
+.home_text {
+  align-self: flex-end; /*flex-end used instead of end for correct iOS mobile rendering*/
+  text-align: right;
+  padding-right: 1.1rem;
+}
+
+.home_text p {
+  font-family: "VeracruzSerial", sans-serif;
+  font-size: 0.9375rem;
+}
+
+.home-logo {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
+
+/* SECTION - ARTISTS */
+
+#artists {
+  left: calc(3.1 * 1920px);
+  top: calc(3.5 * 1080px);
+  height: auto;
+}
 
 .img_container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
-  #artists img {
-    padding: 1rem 2rem;
-    width:100%;
-    height: auto;
-  }
+#artists img {
+  padding: 1rem 2rem;
+  width: 100%;
+  height: auto;
+}
 
-  #artists span {
-    cursor: pointer;
-  }
+#artists span {
+  cursor: pointer;
+}
 
-  .all-artists {
-    display: flex;
-    padding: 0 1.5rem;
-    flex-direction: column;
-  }
+.all-artists {
+  display: flex;
+  padding: 0 1.5rem;
+  flex-direction: column;
+}
 
-  .all-artists h1 {
-    display: none;
-  }
+.all-artists h1 {
+  display: none;
+}
 
-  .artist-list a {
-    text-shadow: 0rem 0rem 1rem white;
-  }
+.artist-list a {
+  text-shadow: 0rem 0rem 1rem white;
+}
 
-
-  .artist {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 0 1.5rem;
-    text-align: center;
-    height: calc(100vh - (2rem + 3*0.2rem + 3*0.7rem));
-    padding-top: calc(2rem + 3*0.2rem + 3*0.7rem);
-  }
+.artist {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0 1.5rem;
+  text-align: center;
+  height: calc(100vh - (2rem + 3 * 0.2rem + 3 * 0.7rem));
+  padding-top: calc(2rem + 3 * 0.2rem + 3 * 0.7rem);
+}
 
 .artist:nth-child(2) {
   display: none;
 }
 
-  .artist-list sup, .artist-list span {
-    font-size: 60%;
-  }
+.artist-list sup,
+.artist-list span {
+  font-size: 60%;
+}
 
-  .artist-list span {
-    display: none;
-  }
+.artist-list span {
+  display: none;
+}
 
-  .artist-list .country {
-    display: inline;
-  }
-  
-  .test-popup {
-    padding: 2rem;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
-    z-index: 91;
-    left: calc(3.1*1920px);
-    top: calc(3.5*1080px);
+.artist-list .country {
+  display: inline;
+}
 
-    background: url(images/terms_background.jpg);
-  }
+.test-popup {
+  padding: 2rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  z-index: 91;
+  left: calc(3.1 * 1920px);
+  top: calc(3.5 * 1080px);
 
-  .artist__actions {
+  background: url(images/terms_background.jpg);
+}
+
+.artist__actions {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-bottom: 4rem;
+}
+
+.artist__action-back,
+.artist__action-next,
+.artist__action-exit,
+.terms__action-exit {
+  transition: 1s;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.artist__action-back:hover,
+.artist__action-next:hover {
+  text-shadow: 0rem 0rem 1rem rgb(160, 159, 83, 1),
+    0rem 0rem 1rem rgb(160, 159, 83, 1);
+}
+
+/* .artist__action-back:hover,
+.artist__action-next:hover {
+  text-decoration: none;
+  transition: 1s;
+  display: inline-block;
+  height: 0.1rem;
+  color: #2d2323;
+  box-shadow: 0 1.8rem 0.6rem 0.2rem rgba(197, 140, 104, 0);
+  text-shadow: 0rem 0rem 1rem white, 0rem 0rem 1rem white;
+} */
+
+.vol__action-exit {
+  color: white;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font: inherit;
+  font-size: 1.625rem;
+  cursor: pointer;
+}
+
+.artist__sc {
+  max-width: 400px;
+  color: #2d2323;
+}
+
+.terms__action-exit {
+  align-self: flex-end;
+  font-size: 2rem;
+}
+
+.artist__action-exit {
+  font-size: 1rem;
+  display: none;
+  padding: 0;
+  padding-left: 2rem;
+  grid-area: artist__action-exit;
+}
+
+.artist__name {
+  font-family: "VeracruzSerial";
+  font-weight: normal;
+  font-size: 1.875rem;
+  padding: 0.2rem;
+}
+
+.artist__bio {
+  font-family: "GradientGothic";
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.artist img {
+  width: 100%;
+}
+
+.centered {
+  font-size: 1rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SECTION - INFO */
+/* SECTION - VOLUNTEER */
+
+#info,
+#volunteer {
+  font-family: "GradientGothic", sans-serif;
+  height: auto;
+}
+#info {
+  left: calc(1.8 * 1920px);
+  top: calc(5.1 * 1080px);
+}
+
+#volunteer {
+  left: calc(2.8 * 1920px);
+  top: calc(6.1 * 1080px);
+}
+
+#info p,
+#info ul,
+#volunteer p,
+#volunteer ul {
+  font-family: "GradientGothic", sans-serif;
+  margin: 0 2rem;
+}
+
+#info h3,
+#volunteer h3 {
+  padding-bottom: 0.2rem;
+}
+
+#info span,
+#volunteer span {
+  text-shadow: 0rem 0rem 1rem white, 0rem 0rem 1rem white;
+}
+
+#info div,
+#volunteer div {
+  margin-bottom: 23px;
+}
+
+#info .feature-img,
+#volunteer .feature-img {
+  margin-bottom: -1.5rem;
+}
+
+#info ul,
+#volunteer ul {
+  display: flex;
+  font-size: 1rem;
+  padding: 20px;
+  color: white;
+  flex-direction: column;
+  list-style: none;
+}
+
+#info li,
+#volunteer li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+#info li:before,
+#volunteer li:before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background: rgba(180, 189, 88, 0.6);
+  filter: blur(0.2rem);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: -15px;
+}
+
+.salmon-underline::after {
+  content: "";
+  margin-top: -0.4rem;
+  display: block;
+  border-radius: 40%;
+  height: 0.4rem;
+  filter: blur(0.2rem);
+  background: rgba(110, 61, 54, 1);
+}
+.yellow-underline::after {
+  content: "";
+  margin-top: -0.4rem;
+  display: block;
+  border-radius: 40%;
+  height: 0.4rem;
+  filter: blur(0.2rem);
+  background: rgba(197, 175, 160, 1);
+}
+
+/* SECTION - SUSTAINABILITY */
+#sustainability {
+  font-family: "GradientGothic", sans-serif;
+  left: calc(4.6 * 1920px);
+  top: calc(4.8 * 1080px);
+}
+
+#sustainability img {
+  width: 70%;
+  height: auto;
+  transform: rotate(180deg);
+}
+
+#sustainability p {
+  font-family: "GradientGothic", sans-serif;
+  margin: 0 2rem;
+  padding-bottom: 1rem;
+}
+
+#sustainability h3 {
+  cursor: default;
+}
+
+/* SECTION - SAY-HI */
+#say-hi {
+  left: calc(1.8 * 1920px);
+  top: calc(7 * 1080px);
+  height: auto;
+  align-items: flex-start;
+  padding: 2rem;
+  padding-top: 6.5rem;
+}
+
+.say-hi__bar {
+  display: none;
+}
+
+#say-hi p {
+  font-family: "GradientGothic", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+/* MEDIA QUERIES*/
+@media (min-width: 800px) {
+  .audio-credit {
+    margin-top: calc(2rem + 3 * 0.2rem + 3 * 0.7rem);
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+  p,
+  label {
+    font-family: "VeracruzSerial";
     font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:auto;
-    padding-bottom:4rem;
   }
 
-  .artist__action-back, .artist__action-next, .artist__action-exit, .terms__action-exit {
-    color: white;
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font: inherit;
-    cursor: pointer;
+  h1 {
+    display: block;
+    font-family: "VeracruzSerial";
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
   }
 
   .vol__action-exit {
-    color: white;
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    font: inherit;
-    font-size:1.625rem;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.188rem;
     cursor: pointer;
   }
 
-  .artist__action-back,
-  .artist__action-next {
-    text-shadow: 0rem 0rem 1rem white,
-    0rem 0rem 1rem white;  
+  h3 {
+    font-family: "VeracruzSerial";
+    font-size: 1.25rem;
   }
 
-
-  .artist__sc {
-    max-width:400px;
+  section {
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 
-  .terms__action-exit {
-    align-self: flex-end;
-    font-size: 2rem;
-  } 
+  .modal-acknowledgment__action {
+    font-size: 2.1875rem;
+    color: white;
+  }
 
-  .artist__action-exit {
-    font-size: 1rem;
+  .toggle-button {
     display: none;
+  }
+  .main-header {
+    display: flex;
+    /* background overflow trick */
+    background-size: cover;
+  }
+  .main-nav {
+    display: flex;
+    padding: 1rem;
+  }
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .toggle-music-mobile {
+    margin-left: auto;
+  }
+  .mobile-nav__brand {
+    display: none;
+  }
+  .section_title {
+    display: none;
+  }
+
+  #home {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: end;
+    padding-left: 3vw;
+    padding-right: 15vw;
+    padding-top: 10vw;
+  }
+
+  .home_text {
+    max-width: 700px;
+    align-self: start;
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  #home h1 {
+    font-size: 1.5rem;
+  }
+
+  .home_text p {
+    font-size: 0.8rem;
+  }
+
+  .home-logo {
+    justify-content: right;
     padding: 0;
-    padding-left: 2rem;
-    grid-area: artist__action-exit;
+    max-width: 400px;
+  }
+
+  #home .vid_container:first-of-type {
+    justify-content: flex-end;
+    align-self: center;
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+  }
+  #home .vid_container:nth-of-type(2) {
+    justify-content: flex-end;
+  }
+
+  .artist {
+    height: auto;
+    width: auto;
+    padding-top: 5rem;
+    padding-left: 3rem;
+    align-self: start;
+  }
+
+  .artist:nth-child(2) {
+    display: flex;
+  }
+
+  .artist__img {
+    max-width: 600px;
   }
 
   .artist__name {
-    font-family: "VeracruzSerial";
-    font-weight: normal;
-    font-size:1.875rem;
-    padding: 0.2rem;
+    cursor: default;
   }
 
+  .artist-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .artist-list span {
+    display: inline;
+  }
+
+  .artist-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: auto;
+  }
+
+  .all-artists h1 {
+    display: block;
+  }
+
+  .artist-list a {
+    text-shadow: none;
+  }
+
+  .all-artists {
+    padding-left: 1.5rem;
+  }
+
+  .artist-list span {
+    /*font-size: 2rem;*/
+    margin: 0 0.2rem;
+  }
+
+  .artist-list h2:nth-of-type(even) a:hover {
+    box-shadow: 0 2.5rem 0.8rem 0.2rem rgba(110, 61, 54, 1);
+    text-shadow: none;
+    border-radius: 1rem;
+  }
+  .artist-list h2:nth-of-type(odd) a:hover {
+    box-shadow: 0 2.5rem 0.6rem 0.2rem rgba(197, 175, 160, 1);
+    text-shadow: none;
+    border-radius: 1rem;
+  }
+
+  #artists {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .all-artists h1 {
+    text-align: center;
+  }
+
+  .all-artists h2 {
+    white-space: nowrap;
+  }
+
+  .all-artists .img_container {
+    display: none;
+  }
+
+  .artist__name {
+    font-size: 2.1875rem;
+  }
 
   .artist__bio {
-    font-family: "GradientGothic";
-    font-size: 0.9375rem;
-    line-height: 1.2;
-    margin-bottom:1rem; 
+    font-size: 1.25rem;
+    text-align: left;
+    line-height: 1.4;
   }
 
-  .artist img {
-    width: 100%;
+  .artist__actions {
+    font-size: 0.8rem;
+    font-family: "VeracruzSerial";
   }
 
-  .centered {
-    font-size: 1rem;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #sustainability,
+  .modal-acknowledgment {
+    padding-left: 20vw;
+    padding-right: 20vw;
   }
 
-  /* SECTION - INFO */
-  /* SECTION - VOLUNTEER */
+  #info p,
+  #info ul,
+  #volunteer p,
+  #volunteer ul {
+    font-family: "VeracruzSerial", sans-serif;
+  }
 
   #info,
   #volunteer {
-    font-family: "GradientGothic", sans-serif;
-    height: auto;
-  }
-  #info {
-    left: calc(1.8*1920px);
-    top: calc(5.1*1080px);
-
-  }
-
-  #volunteer {
-    left: calc(2.8*1920px);
-    top: calc(6.1*1080px);
-  }
-
-  #info p, #info ul,
-  #volunteer p, #volunteer ul {
-    font-family: "GradientGothic", sans-serif;
-    margin: 0 2rem;
-  }
-
-  #info h3,
-  #volunteer h3 {
-    padding-bottom: 0.2rem;
-  }
-
-  #info span,
-  #volunteer span {
-    text-shadow: 0rem 0rem 1rem white,
-    0rem 0rem 1rem white;
-  }
-
-  #info div,
-  #volunteer div {
-    margin-bottom: 23px;
+    padding-left: 500px;
+    padding-top: 14rem;
   }
 
   #info .feature-img,
   #volunteer .feature-img {
-    margin-bottom:-1.5rem;
-  }
-
-  #info ul,
-  #volunteer ul {
-    display: flex;
-    font-size: 1rem;
-    padding: 20px;
-    color: white;
-    flex-direction: column;
-    list-style: none;
-  }
-
-  #info li,
-  #volunteer li {
-    list-style-type: none;
-    position: relative;
-    padding-left: 5px;
-    margin-bottom: 5px; 
-  }
-
-  #info li:before,
-  #volunteer li:before {
-    content:"";
-    height: 1rem;
-    width: 1rem;
-    background: rgba(180, 189, 88, 0.6);
-    filter:blur(0.2rem);
-    border-radius: 50%;
-    display: block;
+    z-index: -1;
     position: absolute;
-    top: 3px;
-    left: -15px;
+    max-width: 400px;
+    top: 14rem;
+    left: 100px;
   }
 
-  .salmon-underline::after {
-    content:'';
-    margin-top: -0.4rem;
-    display: block;
-    border-radius:40%;
-    height: 0.4rem;
-    filter:blur(0.2rem);
-    background: rgba(197, 140, 104, 1);
+  #sustainability .feature-img {
+    width: 60%;
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left: -7%;
   }
-
-  .yellow-underline::after {
-    content:'';
-    margin-top: -0.4rem;
-    display: block;
-    border-radius:40%;
-    height: 0.4rem;
-    filter:blur(0.2rem);
-    background: rgba(180, 188, 87, 1);
-  }
-
-  /* SECTION - SUSTAINABILITY */
-  #sustainability {
-    font-family: "GradientGothic", sans-serif;
-    left: calc(4.6*1920px);
-    top: calc(4.8*1080px);
-  }
-
-  #sustainability img {
-    width: 70%;
-    height: auto;
-    transform: rotate(180deg);
-  }
-
-  #sustainability p {
-    font-family: "GradientGothic", sans-serif;
-    margin: 0 2rem;
-    padding-bottom:1rem;
-  }
-
-#sustainability h3 {
-  cursor:default;
-}
 
   /* SECTION - SAY-HI */
   #say-hi {
-    left: calc(1.8*1920px);
-    top: calc(7*1080px);
-    height: auto;
-    align-items: flex-start;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-end;
     padding: 2rem;
-    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .say-hi__intro {
+    width: 70vw;
+    font-size: 20px;
+  }
+
+  .say-hi__elements {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+  }
+
+  .say-hi__element {
+    flex: 1 1 0;
+    padding-right: 1rem;
+  }
+
+  .say-hi__element h4 {
+    font-size: 0.9375rem;
+  }
+
+  .say-hi__element p {
+    font-size: 0.8125rem;
+  }
+  .terms-popup p,
+  .terms-popup h3,
+  .terms-popup ol,
+  .vol-popup p,
+  .vol-popup h3,
+  .vol-popup ol {
+    font-family: "VeracruzSerial";
+  }
+
+  .vol-popup {
+    padding-left: 30vw;
+    padding-right: 30vw;
+  }
+  .vol-popup h1 {
+    text-align: center;
   }
 
   .say-hi__bar {
-    display:none;
+    display: flex;
+    width: 70vw;
+    height: 1.2rem;
+    background-image: url(images/footer_bar.jpg);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .home_text p {
+    font-size: 1rem;
+  }
+  #home h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    /* font-family: "GradientGothicLight", sans-serif; */
+    font-size: 2.188rem;
+    cursor: pointer;
+  }
+  .artist__bio,
+  .artist__actions {
+    font-size: 1.25rem;
+  }
+  .home_text p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main-header {
+    padding-bottom: 150px;
+    margin-bottom: -150px;
+  }
+}
+
+/* iOS SPECIFIC QUERIES*/
+
+@supports (-webkit-touch-callout: none) {
+  /* Hack for iOS movile device to display above toolbar */
+  section,
+  .artist {
+    height: 84.5vh; /*Border tested on iPhone X - may need to adjust*/
   }
 
-  #say-hi p {
-    font-family: "GradientGothic", sans-serif;
-    margin-bottom: 1.5rem;
+  .artist__actions {
+    padding-bottom: 1.5rem;
   }
-
-
-  /* MEDIA QUERIES*/
-  @media(min-width: 800px) {
-
-    .audio-credit {
-      margin-top: calc(2rem + 3*0.2rem + 3*0.7rem);
-      justify-content: flex-end;
-      padding-right: 1rem;
-    }
-    p, label {
-      font-family: 'VeracruzSerial';
-      font-size: 1rem;
-    }
-
-    h1 {
-      display: block;
-      font-family: 'VeracruzSerial';
-      font-size: 2.5rem;
-      padding-bottom: 1rem;
-    }
-
-    .vol__action-exit {
-      font-size:2.5rem;
-    }
-
-    h2 {
-      font-family: 'VeracruzSerial';
-      font-size: 1.25rem;
-      cursor: pointer;
-    }
-
-    h3 {
-      font-family: 'VeracruzSerial';
-      font-size: 1.25rem;
-    }
-
-    section {
-      padding-left:2vw;
-      padding-right:2vw;
-    }
-
-    .modal-acknowledgment__action {
-      font-size: 2.1875rem;
-    }
-
-    .toggle-button {
-      display: none;
-    }
-    .main-header {
-      display: flex;
-      /* background overflow trick */
-      background-size: cover;
-    }
-    .main-nav {
-      display: flex;
-      padding:1rem;
-    }
-    .main-footer {
-      display: flex;
-      justify-content: space-between;
-    }
-    .toggle-music-mobile {
-      margin-left:auto;
-    }
-    .mobile-nav__brand {
-      display: none;
-    }
-    .section_title {
-      display: none;
-    }
-  
-    #home {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
-      align-items: end;
-      padding-left:3vw;
-      padding-right:15vw;
-      padding-top: 10vw;
-    }
-    
-    .home_text {
-      max-width: 700px;
-      align-self: start;
-      text-align: right;
-      padding-right: 1rem;
-    }
-
-    #home h1 {
-      font-size: 1.5rem;
-    }
-
-    .home_text p {
-      font-size: 0.8rem;
-    }
-
-    .home-logo {
-      justify-content: right;
-      padding: 0;
-      max-width: 400px;
-    }
-
-    #home .vid_container:first-of-type {
-      justify-content: flex-end;
-      align-self: center;
-      grid-column: 1 / 1;
-      grid-row: 1 / 3;
-    }
-    #home .vid_container:nth-of-type(2) {
-      justify-content: flex-end;
-    }
-
-    .artist {
-      height: auto;
-      width: auto;
-      padding-top: 5rem;
-      padding-left: 3rem;
-      align-self:start;
-    }
-
-    .artist:nth-child(2) {
-      display: flex;
-    }
-
-    .artist__img {
-      max-width: 600px;
-    }
-
-    .artist__name {
-      cursor:default;
-    }
-
-    .artist-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap:wrap;
-    }
-
-    .artist-list span {
-      display:inline;
-    }
-
-    .artist-row {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-basis: auto;
-    }
-
-    .all-artists h1 {
-      display: block;
-    }
-
-    .artist-list a {
-      text-shadow: none;
-    }
-
-    .all-artists {
-      padding-left: 1.5rem;
-    }
-
-    .artist-list span {
-      /*font-size: 2rem;*/
-      margin: 0 0.2rem;
-    }
-
-    .artist-list h2:nth-of-type(even) a:hover {
-      box-shadow: 0 2rem 0.6rem 0.2rem rgba(197, 140, 104,0.8);
-      text-shadow: none;
-      border-radius: 1rem;
-    } 
-    .artist-list h2:nth-of-type(odd) a:hover {
-      box-shadow: 0 2rem 0.6rem 0.2rem rgba(180, 189, 88, 0.8);
-      text-shadow: none;
-      border-radius: 1rem;
-    }
-
-    #artists {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: auto;
-      align-items: center;
-      height:100vh;
-    }
-
-    .all-artists h1 {
-      text-align: center;
-    }
-
-    .all-artists h2 {
-      white-space: nowrap;
-    }
-
-    .all-artists .img_container {
-      display: none;
-    }
-
-    .artist__name {
-      font-size:2.1875rem;
-    }
-
-    .artist__bio {
-      font-size:0.8rem;
-      text-align: left;
-      line-height: 1.4;
-      font-family: 'VeracruzSerial';
-    }
-
-    .artist__actions {
-      font-size:0.8rem;
-      font-family: 'VeracruzSerial';
-    }
-
-    #sustainability, .modal-acknowledgment {
-      padding-left:20vw;
-      padding-right:20vw;
-    }
-
-    #info p, #info ul,
-    #volunteer p, #volunteer ul  {
-      font-family: "VeracruzSerial", sans-serif;
-    }
-
-    #info,
-    #volunteer {
-      padding-left: 500px;
-      padding-top: 14rem;
-    }
-
-    #info .feature-img,
-    #volunteer .feature-img {
-      z-index:-1;
-      position: absolute;
-      max-width: 400px;
-      top: 14rem;
-      left: 100px;
-    }
-    
-    #sustainability .feature-img {
-      width: 60%;
-      z-index:-1;
-      position: absolute;
-      top: 15%;
-      left: -7%;
-    }
-
-    /* SECTION - SAY-HI */
-    #say-hi {
-      height: 100vh;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 2rem;
-      padding-bottom: 4rem;
-    }
-
-    .say-hi__intro {
-      width: 70vw;
-      font-size:20px;
-    }
-
-    .say-hi__elements {
-      display:flex;
-      flex-direction: row;
-      width: 70vw;
-    }
-
-    .say-hi__element {
-      flex: 1 1 0;
-      padding-right:1rem;
-    }
-
-    .say-hi__element h4 {
-      font-size:0.9375rem;
-    }
-
-    .say-hi__element p {
-      font-size:0.8125rem;
-    }
-    .terms-popup p, .terms-popup h3, .terms-popup ol,
-    .vol-popup p, .vol-popup h3, .vol-popup ol {
-      font-family: 'VeracruzSerial';
-    }
-
-    .vol-popup {
-      padding-left:30vw;
-      padding-right:30vw;
-    }
-    .vol-popup h1 {
-      text-align: center;
-    }
-
-    .say-hi__bar {
-      display: flex;
-      width: 70vw;
-      height: 1.2rem;
-      background-image: url(images/footer_bar.jpg);
-      margin-bottom: 1rem;
-      border-radius: 1rem;
-    }
+  .submit_vollie {
+    padding-bottom: 8rem;
   }
-
-  @media(min-width: 1000px) {
-    section {
-      padding-left:10vw;
-      padding-right:10vw;
-    }
-    .home_text p {
-      font-size: 1rem;
-    }
-    #home h1 {
-      font-size: 1.75rem;
-    }
-
-  }
-
-  @media(min-width: 1200px) {
-    h2 {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .artist__bio,.artist__actions {
-      font-size: 1rem;
-    }
-    .home_text p {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media(min-width: 1600px) {
-    .main-header {
-      padding-bottom: 150px;
-      margin-bottom: -150px;
-    }
-
-  }
-
-  /* iOS SPECIFIC QUERIES*/
-
-  @supports (-webkit-touch-callout: none) {
-
-    /* Hack for iOS movile device to display above toolbar */
-    section,.artist {
-      height: 84.5vh; /*Border tested on iPhone X - may need to adjust*/
-    }
-
-    .artist__actions {
-      padding-bottom:1.5rem;
-    }
-    .submit_vollie {
-      padding-bottom:8rem;
-    }
-
-  }
+}
