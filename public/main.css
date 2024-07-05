@@ -136,12 +136,21 @@ a {
   -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 1s linear infinite;
 }
-#animations .up-down-animation {
+.up-down-animation {
   animation-name: up-down;
   animation-duration: 2.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Safari */
@@ -783,6 +792,7 @@ input[type="checkbox"]:checked::before {
   width: 100%;
   height: auto;
   max-width: 700px;
+  transition: 1s;
 }
 
 .vid_container {
@@ -835,7 +845,7 @@ input[type="checkbox"]:checked::before {
 
 #artists {
   left: calc(3.1 * 1920px);
-  top: calc(3.5 * 1080px);
+  top: calc(4 * 1080px);
   height: auto;
 }
 
@@ -1017,8 +1027,8 @@ input[type="checkbox"]:checked::before {
 }
 
 #volunteer {
-  left: calc(2.8 * 1920px);
-  top: calc(6.1 * 1080px);
+  left: calc(3.8 * 1920px);
+  top: calc(5.5 * 1080px);
 }
 
 #info p,
@@ -1167,7 +1177,7 @@ input[type="checkbox"]:checked::before {
   }
 
   h2 {
-    font-size: 2.188rem;
+    font-size: 1.6rem;
     cursor: pointer;
   }
 
@@ -1218,7 +1228,7 @@ input[type="checkbox"]:checked::before {
     grid-template-rows: 50% 50%;
     align-items: end;
     padding-left: 3vw;
-    padding-right: 15vw;
+    padding-right: 30vw;
     padding-top: 10vw;
   }
 
@@ -1241,6 +1251,13 @@ input[type="checkbox"]:checked::before {
     justify-content: right;
     padding: 0;
     max-width: 400px;
+  }
+
+  #home .home-img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 35% 0;
   }
 
   #home .vid_container:first-of-type {
@@ -1367,17 +1384,25 @@ input[type="checkbox"]:checked::before {
 
   #info,
   #volunteer {
+    height: 100vh;
+    max-width: 1600px;
     padding-left: 500px;
-    padding-top: 14rem;
   }
 
-  #info .feature-img,
+  #info .feature-img {
+    z-index: -1;
+    position: absolute;
+    max-width: 400px;
+    top: 20vh;
+    left: 100px;
+  }
+
   #volunteer .feature-img {
     z-index: -1;
     position: absolute;
     max-width: 400px;
-    top: 14rem;
-    left: 100px;
+    top: 40vh;
+    left: 200px;
   }
 
   #sustainability .feature-img {
