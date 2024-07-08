@@ -76,12 +76,11 @@ function loaded() {
     scrollY: true,
     mouseWheel: true,
     freeScroll: true,
-    startX: -3 * 1920,
-    startY: -2.1 * 1080,
+    startX: -2.5 * 1920,
+    startY: -1.1 * 1080,
     zoom: false,
   });
 }
-
 document.addEventListener("touchstart", function (e) {
   if (e.touches.length > 1) {
     myScroll.disable();
@@ -108,7 +107,7 @@ artists.set(0, {
   id: 0,
   name: "akka",
   bio: "akka is an experimental artist, radio producer, DJ and community facilitator interested in the sonic, written word and collective organising; guided by a framework of anti-racism, radical hope and reciprocity. Creating under the pseudonym akka, she fuses voice memos, found-sounds, echoic compositions, and influences of her mixed-multifaith lineage. She uses soundscaping as a means to unhinge linear expectations of colonial form and knowledge - in the pursuit of divinity and connection.",
-  image: joinArtistURL("v1687322243/soma/Acopia_02_lu1vbp.png"),
+  image: joinArtistURL("v1720416377/soma/Web_Artist_akka_njwyuu.png"),
   sc: 1546987525,
 });
 
@@ -116,94 +115,89 @@ artists.set(1, {
   id: 1,
   name: "Amelia Holt",
   country: "(US)",
-  bio: "Amelia Holt, one of Brooklyn’s most distinctive selectors, crafts DJ sets that blend percussive rhythms with electronic beats, transforming dancefloors into culture-bending, otherworldly experiences. One may hear her play broken beats, deep high octane, fine and elegant dance, alt techno, sharp electro, and delusional krautrock – sometimes all in the same night. Amelia holds a residency at The Lot Radio and has played in the best of NYC’s venues including Good Room, Nowadays, Sustain-Release & Dripping. Beyond the decks, Amelia curates the music newsletter ‘In Your Dirty Ears’ and runs the party series ‘Honey Trap’. ",
-  image: joinArtistURL("v1686982353/soma/Akka_pg4oit.png"),
+  bio: "Amelia Holt, one of Brooklyn’s most distinctive selectors, crafts DJ sets that transform dancefloors into culture-bending, otherworldly experiences. One may hear her play broken beats, deep high octane, fine and elegant dance, alt techno, sharp electro, and delusional krautrock – sometimes all in the same night. Amelia holds a residency at The Lot Radio and has played in NYC’s best venues including Nowadays, Sustain-Release & Dripping. Beyond the decks, Amelia curates music newsletter ‘In Your Dirty Ears’ and runs the party series ‘Honey Trap’.",
+  image: joinArtistURL("v1720416378/soma/Web_Artist_Amelia_Holt_t0uvcp.png"),
   sc: 1820147427,
 });
-
 artists.set(2, {
   id: 2,
   name: "Anusha",
   bio: "Anusha’s pendulum can swing from heaving hours of the club to soundtracking your precious weekend mornings. As a rotating resident for Cousin’s morning show on FBi Radio ‘Limbs Akimbo’, she brings a gossamer, femme fatale spin on dub textures. Her mix series ‘Limerence Lounge’ is dedicated to a romance between strange and soft sounds.",
-  image: joinArtistURL("v1687322250/soma/Ben_Fester_wvm105.png"),
+  image: joinArtistURL("v1720416379/soma/Web_Artist_Anusha_tmtvkr.png"),
   sc: 1810195095,
 });
 artists.set(3, {
   id: 3,
   name: "Cousin",
-  bio: "Diving from starlit heights to ocean depths, Cousin’s echoes step through tempos and styles while summoning surreal sonic landscapes centred in spacious atmospherics, subterranean bass pressure and rhythmic hypnotisms. Hailing from so-called Australia, Cousin channels the local flora, infusing his work with their variegated vibrancy. Now found on constant rotation of both hemispheres, creating indelible memories and weaving magical dancefloor moments through clubs and festivals across North America, UK, Europe and Asia. Whether DJing a teeming warehouse party or conjuring up a mesmerising live set, Cousin’s versatility as an artist and fluency in navigating across different energy levels comes from a place of unrestrained imagination and otherworldly inspiration.",
-  image: joinArtistURL("v1719977938/soma/Web_Artist_Cousin_wlovzl.png"),
+  bio: "Diving from starlit heights to ocean depths, Cousin’s echoes step through tempos and styles while summoning surreal sonic landscapes centred in spacious atmospherics, subterranean bass pressure and rhythmic hypnotisms. Hailing from so-called Australia, Cousin channels the local flora, infusing his work with their variegated vibrancy. Whether DJing a teeming warehouse party or conjuring up a mesmerising live set, Cousin’s versatility as an artist and fluency in navigating across different energy levels comes from a place of unrestrained imagination and otherworldly inspiration.",
+  image: joinArtistURL("v1720416382/soma/Web_Artist_Cousin_sncdxq.png"),
   sc: 1361408572,
 });
+
 artists.set(4, {
   id: 4,
   name: "DJ Mistry",
   bio: "DJ Mistry is an Indian-born Eora/Sydney local, whose DJ sets traverse across a range of electronic music with an aim to spark intrigue, wonder and escapism on the dancefloor through untamed synths and varying rhythms. With an affinity to no genre in particular, DJ Mistry gravitates towards music that is deep, abrasive and cathartic, reflecting the absurdity of the world and the spirit of the individuals and the community who strive to maintain sanity within it.",
-  image: joinArtistURL("v1687322364/soma/Darcy_Justice_psegjp.png"),
+  image: joinArtistURL("v1720416386/soma/Web_Artist_DJ_Mistry_e6acn1.png"),
   sc: 1309115590,
 });
+
 artists.set(5, {
   id: 5,
   name: "DJ Mum",
   bio: "DJ Mum is a DJ and organiser based in Naarm/Melbourne. Whether it’s through her work for London-based label and mix series, Local Knowledge, or Naarm’s event-space and central community establishment, Miscellania, she is dedicated to championing sounds from across the bass spectrum - from jungle, to dub, dubstep, breaks, and leftfield bass. Expect woozy subs and glitched out drums, strung together by a certain kind of emotional catharsis she calls ‘teen angst’.",
-  image: joinArtistURL("v1687405240/soma/D-Grade_imbi_03_efpops.png"),
+  image: joinArtistURL("v1720416382/soma/Web_Artist_DJ_Mum_ud0mpa.png"),
   sc: 473221344,
 });
+
 artists.set(6, {
   id: 6,
   name: "DJ Paramat",
   bio: "DJ Paramat is a DJ, founder of events and net-label ‘General Merchant', co-host of Fbi Radio’s ‘Limbs Akimbo’ and an active member of the local DIY rave scene in Sydney. As an independent artist, DJ Paramat constantly endeavours to evolve his sound, sharing a new pocket of musical discovery with each set. He aims to challenge listeners and dancefloors by combining unlikely genres with technical proficiency, often layering multiple sounds to create something new and exciting.",
-  image: joinArtistURL("v1686982355/soma/Dj_Paramat_u3lfns.png"),
+  image: joinArtistURL("v1720416390/soma/Web_Artist_DJParamat_yh0i5l.png"),
   sc: 1504499671,
 });
+
 artists.set(7, {
   id: 7,
-  name: "el:su",
-  bio: "An artist that resists classification, el:su (previously ‘Lazy Suzan’) has been an integral part of Eora’s underground music scene since 2015. Viewing the DJ as an active participant in a wider conversation, she has developed a nuanced style over the years having played at renowned techno parties in Tokyo, open-air raves on Sinixt land in BC, Canada and festivals along Australia's east coast, as well as co-hosting monthly shows with Subaske on Nomad Radio as part of their project, Ear Contact.",
-  image: joinArtistURL("v1686982352/soma/Emelyne_bm5abf.png"),
-  sc: 1797308932,
+  name: "Emelyne",
+  bio: "Emelyne is an active force within Naarm’s vibrant music scene and her one-of-a-kind energy and enthusiasm around music brings people together. Emelyne’s diverse array of mixes exhibit her passion and natural craft, each mix in its own dimension, known for taking listeners through sonic spaces where they can plunge into for hours. She’s a sucker for the sweetest slow jams, the deepest darkest low-end frequencies, largely influenced by sound system culture with roots in jazz and punk.",
+  image: joinArtistURL("v1720416400/soma/Web_Artist_Emelyne_ckvxqj.png"),
+  sc: 1128361369,
 });
 artists.set(8, {
   id: 8,
-  name: "Emelyne",
-  bio: "Emelyne is an active force within Naarm’s vibrant music scene and her one-of-a-kind energy and enthusiasm around music brings people together. Emelyne’s diverse array of mixes exhibit her passion and natural craft, each mix in its own dimension, known for taking listeners through sonic spaces where they can plunge into for hours. She’s a sucker for the sweetest slow jams, the deepest darkest low-end frequencies, largely influenced by sound system culture with roots in jazz and punk.",
-  image: joinArtistURL("v1687447286/soma/Facta_K-Lone_zssz28.png"),
-  sc: 1128361369,
-});
-artists.set(9, {
-  id: 9,
   name: "Ex Ponto",
   type: "(LIVE)",
   bio: "After a decade of self-released albums with improvisation collective, Council of Elders, and experimental no-wave band, Wunderlust, Ex Ponto (Ivan Masic) released his debut solo album in 2019 via General Purpose Records. Titled Neka Neka, the LP is a homage to Bosnian poet Ivo Andrić, ex-Yugoslavian experimentalists of the 80s, and the thriving, late-night intellectualism of Belgrade’s Club 20/44. Whilst these influences remain, Ex Ponto’s 2022 release, In A Quarry… (Offen Music) constructs an alternative civilisation of grace, post-sarcasm and intuitive response.",
-  image: joinArtistURL("v1687322263/soma/Genie_uzdngx.png"),
+  image: joinArtistURL("v1720416401/soma/Web_Artist_ExPonto_l69mmi.png"),
   sc: 1745138508,
 });
-
-artists.set(10, {
-  id: 10,
+artists.set(9, {
+  id: 9,
   name: "Genie",
   bio: "Genie is an artist living on Ngunawal/Ngunnawal/Ngambri land. Part nail salon/part DJ/part promoter, Genie’s work aims to support and embrace community. Her mixes traverse through eclectic and ethereal soundscapes, stretching to the edges of emotion whilst pulling on a familiar thread of comfort. Genie runs long-standing party and mix series, Orbit, which has hosted the likes of Ehua, CS & Kreme & DJ Swisha.",
-  image: joinArtistURL("v1687322268/soma/ioki_f2lbxl.png"),
+  image: joinArtistURL("v1720416391/soma/Web_Artist_Genie_d7tliy.png"),
   sc: 1448780506,
 });
-artists.set(11, {
-  id: 11,
+https: artists.set(10, {
+  id: 10,
   name: "Hysterical Love Project",
   type: "(LIVE)",
   bio: "Hysterical Love Project is the Naarm/Melbourne-based duo of Ike Zwanikken and Brooklyn Mellar. Hazy and hypnotic, their undercurrent of sludgy downtempo rhythms are shimmered with layers of melancholic guitar and moody late-night vocals. Their second album “Lashes” was released last year on the beloved LA-based Motion Ward, followed by a string of live shows across the US and Europe.",
-  image: joinArtistURL("v1687447289/soma/Jossy_jomgff.png"),
+  image: joinArtistURL("v1720416389/soma/Web_Artist_HystericalLove_x4hzzx.png"),
   sc: 1509733111,
 });
-artists.set(12, {
-  id: 12,
+artists.set(11, {
+  id: 11,
   name: "Miscmeg",
-  bio: "awaiting bio...",
+  bio: "Miscmeg is a Naarm/Melbourne-based DJ and one-half of event series Vortex. Her sets are mood-driven, thoughtful, expansive deep dives into modes of ambient and tech house. Miscmeg has established herself as a versatile selector, equally adept in energising club settings as she is in creating moments of reflection for home listening. Her sense of curation and intentionality is special, and permeates through the sets she weaves.",
   image: joinArtistURL("v1720012709/soma/Miscmeg_Web_Artist_xdrbld.png"),
   sc: 1481566198,
 });
 
-artists.set(13, {
-  id: 13,
+artists.set(12, {
+  id: 12,
   name: "OK EG",
   type: "(LIVE)",
   bio: "Composed of producers Matthew Wilson and Lauren Squire, OK EG’s strident sound melds rhythm, bass and analogue synth. Known for their hardware-based live sets, the pair spiral around unpredictable patterns and interlocking grooves, encapsulating the unhinged energy of the Melbourne underground. Their latest release, Rivulets - out now on Amsterdam based label Kalahari Oyster Cult - is a deep dive into peak-time rave hypnotism, heads-down mind trips and transportive otherworldly electronics.",
@@ -211,77 +205,74 @@ artists.set(13, {
   sc: 939790300,
 });
 
-artists.set(14, {
-  id: 14,
+artists.set(13, {
+  id: 13,
   name: "Posm",
   type: "(LIVE)",
   bio: "Walking through the trees with heightened senses, Posm guides you through different landscapes with a sense of curiosity, playfulness and depth, blending the natural world with one they’ve constructed. A multi-genre melting pot, the group’s ability to shift from ambient to driven groove is a defining quality of their debut album, 'With the Birds'. Formed on a hilltop on Eora/Sydney’s Northern coastline, Posm’s sonic explorations have reached the airwaves in Europe and the UK and are now crystallising as a live act for the first time.",
-  image: joinArtistURL("v1687322526/soma/Nat_James_e3qzl9.png"),
+  image: joinArtistURL("v1720416391/soma/Web_Artist_Posm_bnd8ba.png"),
   sc: 1609765311,
 });
-artists.set(15, {
-  id: 15,
+artists.set(14, {
+  id: 14,
   name: "Setwun",
   bio: "Setwun explores and maneuverers through the many trajectories of soul, jazz, psych and electronic forms of music; a nod to the past with visions of the future. After a string of releases through CoOp Presents, Mandarin Dreams, OTIS, Rhythm Section and Moonshoe, Setwun toured the UK / EU in 2022 with a run of shows including We Out Here Festival, Ronnie Scotts, The Jazz Cafe, Berlin’s XJAZZ Festival as well as NTS and Worldwide FM guest spots and interviews.",
-  image: joinArtistURL("v1687322451/soma/Natalia_02_ol6ekx.png"),
+  image: joinArtistURL("v1720416378/soma/Web_Artist_Setwun_vdhrrd.png"),
   sc: 1454733796,
 });
 
-artists.set(16, {
-  id: 16,
+artists.set(15, {
+  id: 15,
   name: "Shuko",
   bio: "SHU-KO! Flowing melodically and accented with a percussive click - a name reflective of the hybrid he is. As a DJ and Producer Shuko draws from his Southern African origins, combining them with an eclectic arsenal of global diasporic influences to bring an energetic drum-driven sound to the club. His style is one he describes as “weaving together the different lines of the conversation that is global club music - one that you can’t help but move to.”",
-  image: joinArtistURL("v1687322555/soma/salllvage_01_etsgqc.png"),
+  image: joinArtistURL("v1720416406/soma/Web_Artist_Shuko_icvodp.png"),
   sc: 1838057517,
+});
+artists.set(16, {
+  id: 16,
+  name: "Suzu",
+  bio: "An artist that resists classification, Suzu (previously ‘Lazy Suzan’) has been an integral part of Eora’s underground music scene since 2015. Viewing the DJ as an active participant in a wider conversation, she has developed a nuanced style over the years having played at renowned techno parties in Tokyo, open-air raves on Sinixt land in BC, Canada and festivals along Australia's east coast, as well as co-hosting monthly shows with Subaske on Nomad Radio as part of their project, Ear Contact.",
+  image: joinArtistURL("v1720416399/soma/Web_Artist_Suzu_sfmrjg.png"),
+  sc: 1797308932,
 });
 artists.set(17, {
   id: 17,
   name: "Tim Boyd",
   bio: "Tim Boyd is a DJ and record collector living on Ngunnawal/Ngambri land. Diving and gliding through his enviable collection of house music (and its derivatives), Tim’s mixes are a deeply considered journey, rolling through the often unknown yet nostalgic. Tim also ran Eora/Sydney-based record label Black Wattle, which grew from a healthy diet of sunsets, friends and a shared love of electronic music, with releases from Thomas Gray, Liam Ebbs and Matthew Hayes.",
-  image: joinArtistURL("v1687322563/soma/Setwun_02_bv4fvu.png"),
+  image: joinArtistURL("v1720416405/soma/Web_Artist_TimBoyd_ejf3ev.png"),
   sc: 1163944780,
 });
+
 artists.set(18, {
   id: 18,
-  name: "Toma Kami",
-  country: "(FR)",
-  bio: "awaiting bio...",
-  image: joinArtistURL("v1687405268/soma/Tangela_01_ejie17.png"),
-  sc: 1374753175,
-});
-
-artists.set(19, {
-  id: 19,
   name: "umki",
   type: "(LIVE)",
   bio: "umki is a digital artist and contemporary composer, creating things with sound and other materials, working primarily on unceded Ngunnawal and Ngambri country. Their computer music compositions exist at a boundary between ambient and post-club crunch. Harnessing grains of found sound from deep corners of the web, their voice and field recordings, umki interrogates inner worlds, ebbing and flowing delicately through imagined landscapes. umki has programmed live events and supported the likes of Ana Roxanne (USA), Nai Palm, and Acopia. Their live sets intend a soft communion and invite stimmy ritual states.",
-  image: joinArtistURL("v1687360515/soma/Tim_Boyd_atfdy9.png"),
+  image: joinArtistURL("v1720416406/soma/Web_Artist_umki_zdyufw.png"),
   sc: 1503579088,
+});
+artists.set(19, {
+  id: 19,
+  name: "Wingnut",
+  bio: "Wingnut is the moniker of Gadigal-based DJ Liam Taylor. With a penchant for the nooks, crannies and margins of dance music, Wingnut splices screwball electronica, fleeting melodies and reckless drum programming with a dubwise sensibility - piecing together a murky psychedelia for the body and mind. Alongside Eora/Sydney stalwart D-Grade, Wingnut is also one half of ‘boof’, a semi-frequent (i.e. when they feel like it) DIY party held on Gadigal land that is devoted to all things left of field.",
+  image: joinArtistURL("v1720419261/soma/Web_Artist_EmptyTile_enro8g.png"),
+  sc: 1805893230,
 });
 artists.set(20, {
   id: 20,
-  name: "Wingnut",
-  bio: "Wingnut is the moniker of Gadigal-based DJ Liam Taylor. With a penchant for the nooks, crannies and margins of dance music, Wingnut splices screwball electronica, fleeting melodies and reckless drum programming with a dubwise sensibility - piecing together a murky psychedelia for the body and mind. Alongside Eora/Sydney stalwart D-Grade, Wingnut is also one half of ‘boof’, a semi-frequent (i.e. when they feel like it) DIY party held on Gadigal land that is devoted to all things left of field.",
-  image: joinArtistURL("v1687322477/soma/Yikes_oksuhd.png"),
-  sc: 1805893230,
+  name: "Yikes",
+  bio: "Boorloo-based Wongi man Yikes is a multi-talented DJ, producer, radio presenter, artist, designer and promoter. Not one to stick to any genre, Yikes’ sets are known to glide through a variety, effortlessly, tied together with his signature style of deep, broken and percussive sounds. Through his contributions on RTRFM community radio, his First Nations DJ course for young musicians and his own creative agency, Nani Creative, he continues to lay the groundwork for others and tangibly fight back against the lack of diversity in creative industries.",
+  image: joinArtistURL("v1720416396/soma/Web_Artist_Yikes_w5tkvz.png"),
+  sc: 1760080026,
 });
 artists.set(21, {
   id: 21,
-  name: "Yikes",
-  bio: "Boorloo-based Wongi man Yikes is a multi-talented DJ, producer, radio presenter, artist, designer and promoter. Not one to stick to any genre, Yikes’ sets are known to glide through a variety, effortlessly, tied together with his signature style of deep, broken and percussive sounds. Through his contributions on RTRFM community radio, his First Nations DJ course for young musicians and his own creative agency, Nani Creative, he continues to lay the groundwork for others and tangibly fight back against the lack of diversity in creative industries.",
-  image: joinArtistURL("v1720012709/soma/Yikes_Web_Artist_hiva8n.png"),
-  sc: 1539376159,
-});
-
-artists.set(22, {
-  id: 22,
   name: "Yushh",
   country: "(UK)",
   bio: "awaiting bio...",
-  image: joinArtistURL("v1687322477/soma/Yikes_oksuhd.png"),
+  image: joinArtistURL("v1720416402/soma/Web_Artist_Yussh_fe2v53.png"),
   sc: 1422003994,
 });
-
 //Artist Popup Functionality
 var artistMobile = document.querySelectorAll(".artist")[0];
 var artistDesktop = document.querySelectorAll(".artist")[1];
@@ -345,7 +336,7 @@ for (let i = 0; i < backButton.length; i++) {
   backButton[i].addEventListener("click", function () {
     prevArtistId = currentArtist.id - 1;
     if (prevArtistId == -1) {
-      prevArtistId = 22;
+      prevArtistId = 21;
     }
     currentArtist = artists.get(prevArtistId);
     loadArtistElement();
@@ -356,7 +347,7 @@ nextButton = document.querySelectorAll(".artist__action-next");
 
 for (let i = 0; i < nextButton.length; i++) {
   nextButton[i].addEventListener("click", function () {
-    prevArtistId = (currentArtist.id + 1) % 23;
+    prevArtistId = (currentArtist.id + 1) % 22;
     currentArtist = artists.get(prevArtistId);
     loadArtistElement();
   });

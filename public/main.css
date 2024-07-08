@@ -246,7 +246,7 @@ a {
   opacity: 0;
   transition: opacity 2s;
   font-family: "VeracruzSerial";
-  color: #2d2323;
+  color: white;
   background: transparent;
   border: none;
   text-decoration: none;
@@ -459,7 +459,14 @@ input[type="checkbox"]:checked::before {
 .filter_white {
   transition: 0.5s;
 
-  filter: brightness(0) invert(1); /*drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));*/
+  filter: brightness(0%) saturate(100%) invert(9%) sepia(10%) saturate(1289%)
+    hue-rotate(314deg) brightness(97%) contrast(86%)
+    drop-shadow(0rem 0rem 0.6rem rgb(255, 255, 255));
+}
+
+.home_text-p2:first-letter {
+  line-height: 0.5;
+  vertical-align: bottom;
 }
 
 /* HEADER - MAIN NAV */
@@ -562,7 +569,9 @@ input[type="checkbox"]:checked::before {
 .main-nav__contacts img {
   padding: 0rem 0.6rem;
   height: 1.4rem;
-  filter: drop-shadow(0rem 0rem 0.2rem rgb(255, 255, 255));
+  filter: brightness(0%) saturate(100%) invert(9%) sepia(10%) saturate(1289%)
+    hue-rotate(314deg) brightness(97%) contrast(86%)
+    drop-shadow(0rem 0rem 0.6rem rgb(255, 255, 255));
   transition: 1s;
 }
 
@@ -779,7 +788,6 @@ input[type="checkbox"]:checked::before {
 .vol-popup ol {
   font-family: "VeracruzSerial";
   font-size: 1rem;
-  color: white;
   margin-bottom: 1rem;
   padding-left: 1em;
 }
@@ -788,8 +796,24 @@ input[type="checkbox"]:checked::before {
   margin-left: -1em;
 }
 
+#info .feature-img {
+  padding-top: 1.8rem;
+  width: 70%;
+}
+
+#volunteer .feature-img {
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+  width: 70%;
+}
+
+#home .home-img {
+  width: 75%;
+  padding-top: 5rem;
+  margin-bottom: -2.5rem;
+}
+
 .feature-img {
-  width: 100%;
   height: auto;
   max-width: 700px;
   transition: 1s;
@@ -803,8 +827,8 @@ input[type="checkbox"]:checked::before {
 /* SECTION - HOME PAGE */
 
 #home {
-  left: calc(3 * 1920px);
-  top: calc(2.1 * 1080px);
+  left: calc(2.5 * 1920px);
+  top: calc(1 * 1080px);
 }
 
 #home h1 {
@@ -1054,10 +1078,10 @@ input[type="checkbox"]:checked::before {
   margin-bottom: 23px;
 }
 
-#info .feature-img,
+/* #info .feature-img,
 #volunteer .feature-img {
   margin-bottom: -1.5rem;
-}
+} */
 
 #info ul,
 #volunteer ul {
