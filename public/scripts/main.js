@@ -77,7 +77,7 @@ function loaded() {
     mouseWheel: true,
     freeScroll: true,
     startX: -2.5 * 1920,
-    startY: -1.1 * 1080,
+    startY: -1 * 1080,
     zoom: false,
   });
 }
@@ -255,7 +255,7 @@ artists.set(19, {
   id: 19,
   name: "Wingnut",
   bio: "Wingnut is the moniker of Gadigal-based DJ Liam Taylor. With a penchant for the nooks, crannies and margins of dance music, Wingnut splices screwball electronica, fleeting melodies and reckless drum programming with a dubwise sensibility - piecing together a murky psychedelia for the body and mind. Alongside Eora/Sydney stalwart D-Grade, Wingnut is also one half of ‘boof’, a semi-frequent (i.e. when they feel like it) DIY party held on Gadigal land that is devoted to all things left of field.",
-  image: joinArtistURL("v1720419261/soma/Web_Artist_EmptyTile_enro8g.png"),
+  image: joinArtistURL("v1720441547/soma/Web_Artist_Wingnut_qwb2dp.png"),
   sc: 1805893230,
 });
 artists.set(20, {
@@ -269,9 +269,9 @@ artists.set(21, {
   id: 21,
   name: "Yushh",
   country: "(UK)",
-  bio: "awaiting bio...",
+  bio: "Yushh’s dubbed-out, atmospheric compositions are unmistakable. They give the illusion of comprising infinite layers of sound; no eight-bar mimicking the last as if we’re listening to her experiment in real time. Her own label, Pressure Dome, showcases an intricate curation of homegrown, emerging talent and has hosted parties with the likes of Pariah, Rhyw, DJ Python and Ehua. Yushh has carved out a distinct space for her weird, wonky sound; at times drawing on influences across the hardcore continuum, and at others offering a gentle, contemplative respite.",
   image: joinArtistURL("v1720416402/soma/Web_Artist_Yussh_fe2v53.png"),
-  sc: 1422003994,
+  sc: 1141022758,
 });
 //Artist Popup Functionality
 var artistMobile = document.querySelectorAll(".artist")[0];
@@ -327,7 +327,7 @@ function loadArtist(artist, currentArtist) {
     currentArtist.sc +
     "&color=%23283a97&inverse=true&auto_play=false&show_user=true";
   artist.querySelector(".artist__sc").src = sc_string;
-  artist.querySelector(".artist__id").innerHTML = currentArtist.id + 1 + "/23";
+  artist.querySelector(".artist__id").innerHTML = currentArtist.id + 1 + "/22";
 }
 
 backButton = document.querySelectorAll(".artist__action-back");
