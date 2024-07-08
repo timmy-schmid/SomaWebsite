@@ -134,7 +134,7 @@ li {
   margin-top: 2rem;
   border: 0.5rem solid #f3f3f3;
   border-radius: 50%;
-  border-top: 0.5rem solid #a5ceb6;
+  border-top: 0.5rem solid #c5afa0;
   width: 4rem;
   height: 4rem;
   -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -1189,6 +1189,11 @@ input[type="checkbox"]:checked::before {
 
 /* MEDIA QUERIES*/
 @media (min-width: 800px) {
+  .terms-popup {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
   .audio-credit {
     margin-top: calc(2rem + 3 * 0.2rem + 3 * 0.7rem);
     justify-content: flex-end;
