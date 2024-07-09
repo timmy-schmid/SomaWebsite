@@ -1316,8 +1316,8 @@ input[type="checkbox"]:checked::before {
     /* height: auto; */
     width: auto;
     max-width: 800px;
-    padding-top: 5rem;
     padding-left: 2rem;
+    padding-top: 2.8rem;
     align-self: start;
   }
 
@@ -1325,9 +1325,11 @@ input[type="checkbox"]:checked::before {
     display: flex;
   }
 
-  .artist__img {
+  #artists img {
     width: 80%;
     max-width: 600px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .artist__name {
@@ -1384,8 +1386,8 @@ input[type="checkbox"]:checked::before {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
     /* max-width: 1600px; */
   }
 
@@ -1406,7 +1408,7 @@ input[type="checkbox"]:checked::before {
   }
 
   .artist__bio {
-    font-size: 1.15rem;
+    font-size: 1rem;
     text-align: left;
     line-height: 1.4;
   }
@@ -1522,18 +1524,31 @@ input[type="checkbox"]:checked::before {
 }
 
 .artist__actions {
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
+}
+
+@media (min-height: 900px) {
+  .artist__actions {
+    padding-bottom: 5vh;
+  }
 }
 
 @media (min-height: 1050px) {
   .artist__actions {
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
   }
-}
-
-@media (min-height: 1200px) {
-  .artist__actions {
-    padding-bottom: 30vh;
+  .artist__bio {
+    font-size: 1.15rem;
+  }
+  #artists img {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 20vh;
+    padding-bottom: 1rem;
+  }
+  .artist {
+    padding-top: 5rem;
   }
 }
 
