@@ -224,7 +224,7 @@ artists.set(14, {
 artists.set(15, {
   id: 15,
   name: "Shuko",
-  bio: "SHU-KO! Flowing melodically and accented with a percussive click - A name reflective of the hybrid he is. As a DJ and Producer Shuko draws from his Southern African origins, combining them with an eclectic arsenal of global diasporic influences to bring an energetic drum-driven sound to the club. Shuko’s style is one he describes as weaving together the different lines of the conversation that is global club music - One that you can’t help but move to. Shuko’s eclectic blend of sound has had him share the stage with a range of Artists such as, Bok Bok, DJ Stingray, Girl Unit, Hagan, Jael, Kush Jones, Mc Yallah & Debmaster, MikeQ, rRoxymore",
+  bio: "SHU-KO! Flowing melodically and accented with a percussive click - a name reflective of the hybrid he is. As a DJ and Producer, Shuko draws from his Southern African origins, combining them with an eclectic arsenal of global diasporic influences to bring an energetic drum-driven sound to the club. Shuko’s style is one he describes as weaving together the different lines of the conversation that is global club music - one that you can’t help but move to. Shuko’s eclectic blend of sound has had him share the stage with a range of artists such as Bok Bok, DJ Stingray, Girl Unit, Hagan, Jael, Kush Jones, Mc Yallah & Debmaster, MikeQ and rRoxymore.",
   image: joinArtistURL("v1720416406/soma/Web_Artist_Shuko_icvodp.png"),
   sc: 1838055963,
 });
