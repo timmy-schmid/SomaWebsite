@@ -11,6 +11,8 @@ var audioOn = false;
 var scrollLinks = document.querySelectorAll(".scroll-link");
 var infoSections = document.querySelectorAll("#info h3");
 var termLinks = document.querySelectorAll(".terms-link");
+var volLink = document.querySelectorAll(".vol-link");
+var volSubmit = document.querySelector(".submit_vollie");
 var audioCredit = document.querySelector(".audio-credit");
 var audio = document.getElementById("audio");
 
@@ -368,6 +370,13 @@ for (var i = 0; i < termLinks.length; i++) {
   });
 }
 
+for (var i = 0; i < volLink.length; i++) {
+  volLink[i].addEventListener("click", function () {
+    myScroll.disable();
+    document.querySelector(".vol-popup").classList.remove("visually-hidden");
+  });
+}
+
 document
   .querySelector(".artist__action-exit")
   .addEventListener("click", function () {
@@ -375,6 +384,13 @@ document
     this.style.display = "none";
     currentArtist = undefined;
     closeMobileNav();
+  });
+
+document
+  .querySelector(".vol__action-exit")
+  .addEventListener("click", function () {
+    myScroll.enable();
+    document.querySelector(".vol-popup").classList.add("visually-hidden");
   });
 
 document

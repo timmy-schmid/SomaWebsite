@@ -271,7 +271,7 @@ li {
 }
 
 #vol-form label {
-  color: white;
+  color: #2d2323;
   font-size: 1rem;
   margin-right: 1rem;
 }
@@ -290,11 +290,11 @@ li {
   width: fit-content;
   align-self: center;
   font-family: "GradientGothic";
-  color: white;
+  color: #2d2323;
   background: transparent;
   border: none;
   transition: text-decoration 1s ease;
-  text-shadow: 0rem 0rem 1rem white;
+  text-shadow: 0rem 0rem 1rem #2d2323;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   cursor: pointer;
@@ -311,7 +311,7 @@ li {
   border-radius: 40%;
   height: 0.4rem;
   filter: blur(0.2rem);
-  background: rgba(180, 188, 87, 1);
+  background: rgba(110, 61, 54, 1);
 }
 
 /*    content:'';
@@ -324,8 +324,8 @@ li {
 
 textarea {
   background-color: transparent;
-  border: 1px solid white;
-  color: rgb(32, 60, 185);
+  border: 1px solid #2d2323;
+  color: #283a97;
   height: 5rem;
   resize: vertical;
 }
@@ -367,10 +367,10 @@ input[type="checkbox"] {
   /* Not removed via appearance */
   margin: 0;
   font: inherit;
-  color: white;
+  color: #2d2323;
   width: 0.8rem;
   height: 0.8rem;
-  border: 1px dashed white;
+  border: 1px dashed #2d2323;
   border-radius: 0.15em;
   display: grid;
   place-content: center;
@@ -393,7 +393,7 @@ input[type="checkbox"]:checked::before {
 
 #vol-form input:not([type="checkbox"]) {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #2d2323;
   flex-grow: 1;
 }
 
@@ -541,6 +541,10 @@ input[type="checkbox"]:checked::before {
 .vol-link {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.vol-link a {
+  color: #c5afa0;
 }
 
 .main-nav__item--cta span:before,
@@ -999,7 +1003,7 @@ input[type="checkbox"]:checked::before {
 } */
 
 .vol__action-exit {
-  color: white;
+  color: #2d2323;
   background: transparent;
   border: none;
   text-decoration: none;
@@ -1117,7 +1121,7 @@ input[type="checkbox"]:checked::before {
   content: "";
   height: 1rem;
   width: 1rem;
-  background: rgba(180, 189, 88, 0.6);
+  background: rgba(197, 175, 160, 1);
   filter: blur(0.2rem);
   border-radius: 50%;
   display: block;
